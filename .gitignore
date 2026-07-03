@@ -1,0 +1,47 @@
+# Ignore catalogue PDF output folder
+Catalogue_PDFs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.old
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache / virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build / output folders
+dist/
+build/
+out/
+coverage/
+
+# Cache folders
+.cache/
+
+# PDFs
+*.pdf

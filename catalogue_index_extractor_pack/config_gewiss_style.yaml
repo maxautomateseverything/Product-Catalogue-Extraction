@@ -1,5 +1,5 @@
-input_pdf: "C:/Path/To/gewiss-trade-catalogue-2025---2026-en.pdf"
-output_folder: "C:/Path/To/Index Output"
+input_pdf: 'C:\Users\max.yoong\OneDrive - Edmundson Electrical Ltd\Product Data - Documents\1 - Pentaho\X - Max Yoong\7. Catalogue\Catalogue_PDFs\Gewiss\gewiss-trade-catalogue-2025---2026-en.pdf'
+output_folder: 'C:\Users\max.yoong\OneDrive - Edmundson Electrical Ltd\Product Data - Documents\1 - Pentaho\X - Max Yoong\7. Catalogue\Catalogue_PDFs\Gewiss\Index_Output'
 index_pdf_pages: "1293-1364"
 page_source_of_truth: "pdf_page_number"
 
@@ -10,22 +10,23 @@ required_columns:
     inclusion_mode: "left"
   page:
     header_text: "Page"
-    alignment: "left"
-    inclusion_mode: "left"
+    alignment: "right"
+    inclusion_mode: "right"
 
 optional_columns:
   - output_name: "pack_carton"
     header_text: "Pack/carton"
-    alignment: "left"
-    inclusion_mode: "left"
+    alignment: "right"
+    inclusion_mode: "right"
     value_regex: "^[0-9]+(?:/[0-9]+)*$"
     invalid_value_action: "blank_and_warn"
   - output_name: "pallet"
     header_text: "Pallet"
-    alignment: "left"
-    inclusion_mode: "left"
+    alignment: "right"
+    inclusion_mode: "right"
     value_regex: "^[0-9]+$"
     invalid_value_action: "blank_and_warn"
+
 
 expected_table_blocks_per_page: 3
 
@@ -40,9 +41,10 @@ sku_detection:
     - "DX 15 825 R"
     - "GW 10 051 AB"
     - "GW 10 159 F"
+    - "GW 16 022 SPW"
   negative_examples:
-    - "DX 26"
     - "GW 21"
+    - "DX 26"
   sku_regex: "\\b(?:GW|DX)(?:[\\s\\-_/\\.]+[A-Z0-9]{1,8}){2,5}\\b"
 
 sku_rules:
@@ -51,15 +53,18 @@ sku_rules:
 
 page_detection:
   positive_examples:
-    - "344"
-    - "839"
-    - "12/13"
+    - "985"
+  # Leave blank to keep any non-empty text found in the Page column.
   page_regex: "(?i)\\b(?:see\\s+page\\s+)?[A-Z]?\\d+(?:\\s*(?:,|/|;|-)\\s*[A-Z]?\\d+)*\\b"
   keep_original_and_normalized: true
 
 ignore_row_patterns:
   - "^DX\\s+\\d+$"
   - "^GW\\s+\\d+$"
+
+example_validation_pairs:
+  - sku: "GW 21 005"
+    page: "1026"
 
 example_validation_groups:
   - code: "DX 10 016 R"
@@ -89,3 +94,5 @@ advanced:
   y_tolerance: 3
   data_bottom: 802.445
   boundary_overlap_warning_threshold: 0.75
+  # Optional: use when the printed page number/footer appears inside the far-right Page column region.
+  # data_bottom: 760
