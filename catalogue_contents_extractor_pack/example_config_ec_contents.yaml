@@ -1,0 +1,89 @@
+# Example contents config for an Electric Center-style contents page.
+# Electric Center content often has dot leaders and explicit page ranges/lists.
+# Do not enable page_range_derivation for this type unless the catalogue only uses single start pages.
+
+input_pdf: "C:/Path/To/_EC2627_Composite (R1).pdf"
+output_folder: "C:/Path/To/Electric Center Contents Output"
+contents_pdf_pages: "6"
+
+extraction:
+  mode: "region_rules"
+
+output_columns:
+  - main_header
+  - subheader_1
+  - subheader_2_page_number_combined
+  - subheader_2
+  - page_number
+
+outputs:
+  include_combined_item_page: true
+
+inspection:
+  text_preview_chars: 1000
+  debug_images: true
+  debug_zoom: 1.5
+
+page_range_derivation:
+  enabled: false
+
+page_number:
+  regex: "(?i)(?:see\\s+page\\s+)?[A-Z]?\\d+(?:\\s*(?:,|/|;|-|–|—)\\s*[A-Z]?\\d+)*"
+  position: "trailing"
+
+# Use the selector to define content regions and ignore the symbol key / notes panel.
+# Areas outside content_regions are ignored automatically. Areas inside ignore_regions
+# are also ignored.
+content_regions: []
+ignore_regions: []
+visual_templates: []
+
+classification_rules:
+  - name: ignore_key_to_lamps
+    priority: 1
+    action: ignore
+    text_regex: "^(Key to Lamps|Denotes|Important Note|All Prices Exclude VAT)"
+
+  - name: section_header
+    priority: 10
+    action: set_main_header
+    text_regex: "^Section\\s+\\d+\\b.*"
+
+  - name: category_header
+    priority: 20
+    action: set_subheader_1
+    # Replace with font/color filters from the inspector for better accuracy.
+    text_regex: "^[A-Za-z][A-Za-z &/\\-]+$"
+    text_not_regex: "\\d"
+
+  - name: dot_leader_item
+    priority: 100
+    action: emit_row
+    page_number_position: trailing
+    item_text_field: subheader_2
+
+# Handles rows like:
+# Metal Driva Cavity
+# Fixings.............................96, 100-101
+multiline_items:
+  enabled: true
+  same_style_required: true
+  max_vertical_gap: 8
+  mark_merged_rows_for_review: false
+
+default_item_rule: true
+default_item_text_field: subheader_2
+
+validation_examples:
+  - main_header: "Section 2 Cable Accessories"
+    subheader_1: "Fixings & Fastenings"
+    subheader_2: "Metal Driva Cavity Fixings"
+    page_number: "96, 100-101"
+
+review_files:
+  write_separate_csvs: false
+
+debug_images:
+  enabled: true
+  only_issue_pages: true
+  zoom: 1.5

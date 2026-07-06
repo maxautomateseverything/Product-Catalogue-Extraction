@@ -1,0 +1,132 @@
+# Example contents config for a Gewiss-style contents page.
+# This file is a starting template. Run the inspector first and then adjust
+# font/position rules or draw visual regions using catalogue_contents_region_selector.py.
+
+input_pdf: "C:/Path/To/gewiss-trade-catalogue-2025---2026-en.pdf"
+output_folder: "C:/Path/To/Gewiss Contents Output"
+contents_pdf_pages: "13-14"
+
+extraction:
+  # Use region_rules when you want user-selected regions plus rules.
+  # Use area_table when each lowest-level row is split into separate selected columns.
+  mode: "region_rules"
+
+output_columns:
+  - main_header
+  - subheader_1
+  - subheader_2
+  - subheader_3
+  - page_number
+
+inspection:
+  text_preview_chars: 1000
+  debug_images: true
+  debug_zoom: 1.5
+  write_csv_copies: false
+
+# Page numbers in Gewiss contents are usually single starting pages.
+# If enabled, 436 followed by 461 becomes 436 - 460 within the same scope.
+page_range_derivation:
+  enabled: true
+  scope_columns:
+    - main_header
+    - subheader_1
+  same_rule_only: false
+  last_item_strategy: "single_page"
+
+page_number:
+  regex: "(?i)(?:see\\s+page\\s+)?[A-Z]?\\d+(?:\\s*(?:,|/|;|-|–|—)\\s*[A-Z]?\\d+)*"
+  position: "trailing"
+
+# Use content regions when the page has multiple reading zones or when a major header
+# sits to the left of content that belongs to it.
+# Coordinates below are placeholders. Use the selector to create real values.
+content_regions: []
+ignore_regions: []
+visual_templates: []
+
+# Optional deterministic area-table approach.
+# Use this when you can draw separate columns for code, title, and page number.
+# This is the most accurate way to produce:
+# Main header = INSTALLATION
+# Subheader 1 = CONDUITS AND ACCESSORIES FOR INSTALLATION
+# Subheader 2 = RK
+# Subheader 3 = Rigid protective conduit systems
+# Page Number = 330 - 343
+area_table_groups:
+  # - name: installation_conduits
+  #   page_range: "13"
+  #   fixed_context:
+  #     main_header: "INSTALLATION"
+  #     subheader_1: "CONDUITS AND ACCESSORIES FOR INSTALLATION"
+  #   row_tolerance: 3.0
+  #   columns:
+  #     - field: subheader_2
+  #       x0: 100
+  #       y0: 250
+  #       x1: 140
+  #       y1: 700
+  #     - field: subheader_3
+  #       x0: 145
+  #       y0: 250
+  #       x1: 450
+  #       y1: 700
+  #     - field: page_number
+  #       x0: 460
+  #       y0: 250
+  #       x1: 520
+  #       y1: 700
+
+classification_rules:
+  # Rule examples only. Replace font sizes/fonts after running the inspector.
+  - name: ignore_index_title
+    priority: 1
+    action: ignore
+    text_regex: "^Index\\b"
+
+  - name: main_header_energy_installation
+    priority: 10
+    action: set_main_header
+    text_regex: "^(ENERGY|INSTALLATION)$"
+
+  - name: uppercase_category_header
+    priority: 20
+    action: set_subheader_1
+    text_regex: "^[A-Z][A-Z0-9 &/\\-]+$"
+    font_size_min: 8
+
+  - name: lowest_level_item
+    priority: 100
+    action: emit_row
+    page_number_position: trailing
+    # Regex captures code/title/page from rows like:
+    # RK Rigid protective conduit systems 330
+    item_regex: "^(?P<code>[A-Z0-9][A-Z0-9 ]{0,12}?)\\s+(?P<title>.+?)\\s+(?P<page>\\d+)$"
+    map:
+      subheader_2: "{code}"
+      subheader_3: "{title}"
+      page_number: "{page}"
+
+multiline_items:
+  enabled: true
+  same_style_required: true
+  max_vertical_gap: 8
+  mark_merged_rows_for_review: false
+
+default_item_rule: true
+default_item_text_field: subheader_3
+
+validation_examples:
+  - main_header: "INSTALLATION"
+    subheader_1: "CONDUITS AND ACCESSORIES FOR INSTALLATION"
+    subheader_2: "RK"
+    subheader_3: "Rigid protective conduit systems"
+    page_number: "330 - 343"
+
+review_files:
+  write_separate_csvs: false
+
+debug_images:
+  enabled: true
+  only_issue_pages: true
+  zoom: 1.5

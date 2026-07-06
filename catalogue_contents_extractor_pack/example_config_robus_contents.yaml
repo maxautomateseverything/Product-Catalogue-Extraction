@@ -1,0 +1,109 @@
+# Example contents config for a ROBUS-style visual card/grid contents page.
+# The user defines page number regions and title regions. The extractor pairs
+# page numbers to titles in the same y region.
+
+input_pdf: "C:/Path/To/ROBUS UK & IRE 2026 CATALOGUE.pdf"
+output_folder: "C:/Path/To/ROBUS Contents Output"
+contents_pdf_pages: "4-5"
+
+extraction:
+  mode: "card_grid"
+
+output_columns:
+  - main_header
+  - subheader_1
+  - page_number
+
+inspection:
+  text_preview_chars: 1000
+  debug_images: true
+  debug_zoom: 1.5
+
+page_number:
+  regex: "\\d+"
+  position: "leading"
+
+# ROBUS card pages commonly show the start page. Enable this when you want
+# 198 followed by 212 to become 198 - 211 within the same card group.
+page_range_derivation:
+  enabled: true
+  scope_columns:
+    - main_header
+  same_rule_only: false
+  last_item_strategy: "single_page"
+
+visual_templates: []
+
+card_grid:
+  row_tolerance: 12
+  pairing_direction: "right"  # right, left, above, below
+  groups:
+    # Coordinates are placeholders. Use the selector to create real regions.
+    # Split the page into separate groups whenever the main header changes.
+    # - name: commercial_left_column
+    #   page_range: "4"
+    #   fixed_context:
+    #     main_header: "COMMERCIAL"
+    #   pairing_direction: "right"
+    #   max_y_distance: 14
+    #   page_number_regions:
+    #     - x0: 20
+    #       y0: 80
+    #       x1: 55
+    #       y1: 700
+    #   title_regions:
+    #     - x0: 60
+    #       y0: 80
+    #       x1: 180
+    #       y1: 700
+    # - name: customised_linear_middle_column
+    #   page_range: "4"
+    #   fixed_context:
+    #     main_header: "CUSTOMISED LINEAR"
+    #   pairing_direction: "right"
+    #   max_y_distance: 14
+    #   page_number_regions:
+    #     - x0: 210
+    #       y0: 80
+    #       x1: 245
+    #       y1: 160
+    #   title_regions:
+    #     - x0: 250
+    #       y0: 80
+    #       x1: 350
+    #       y1: 160
+    # - name: downlights_middle_column
+    #   page_range: "4"
+    #   fixed_context:
+    #     main_header: "DOWNLIGHTS"
+    #   pairing_direction: "right"
+    #   max_y_distance: 14
+    #   page_number_regions:
+    #     - x0: 210
+    #       y0: 190
+    #       x1: 245
+    #       y1: 700
+    #   title_regions:
+    #     - x0: 250
+    #       y0: 190
+    #       x1: 350
+    #       y1: 700
+
+validation_examples:
+  - main_header: "COMMERCIAL"
+    subheader_1: "DALLAS LED BACKLIT PANEL - IP65"
+    page_number: "171"
+  - main_header: "CUSTOMISED LINEAR"
+    subheader_1: "ZIIGNA"
+    page_number: "198 - 211"
+  - main_header: "DOWNLIGHTS"
+    subheader_1: "ULTIMUM EXPRESS DUAL WATTAGE LED FIRE RATED"
+    page_number: "212 - 213"
+
+review_files:
+  write_separate_csvs: false
+
+debug_images:
+  enabled: true
+  only_issue_pages: true
+  zoom: 1.5
