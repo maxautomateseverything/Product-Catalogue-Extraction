@@ -1,8 +1,11 @@
 input_pdf: 'C:\Users\max.yoong\OneDrive - Edmundson Electrical Ltd\Product Data - Documents\1 - Pentaho\X - Max Yoong\7. Catalogue\Catalogue_PDFs\Gewiss\gewiss-trade-catalogue-2025---2026-en.pdf'
 output_folder: 'C:\Users\max.yoong\OneDrive - Edmundson Electrical Ltd\Product Data - Documents\1 - Pentaho\X - Max Yoong\7. Catalogue\Catalogue_PDFs\Gewiss\Index_Output'
+# Inclusive
 index_pdf_pages: "1293-1364"
 page_source_of_truth: "pdf_page_number"
 
+# inclusion_mode used to decide whether to flag data spill issues. "left" means that the left edge of the data must be within the left edge of the header, and "right" means that the right edge of the data must be within the right edge of the header. "both" means that both edges must be within the header edges.
+# use left when left aligned, right when right aligned, and both when centered.
 required_columns:
   sku:
     header_text: "Code"
@@ -94,5 +97,4 @@ advanced:
   y_tolerance: 3
   data_bottom: 802.445
   boundary_overlap_warning_threshold: 0.75
-  # Optional: use when the printed page number/footer appears inside the far-right Page column region.
-  # data_bottom: 760
+

@@ -1,8 +1,8 @@
-# Catalogue Index Extractor — Master Process and Logic Guide
+# Catalogue Index Extractor — Complete User and Logic Guide
 
 ## 1. Purpose
 
-This tool extracts a reusable product-code index from selectable-text PDF catalogue index pages.
+This tool extracts a reusable product-code index from selectable-text PDF catalogues.
 
 The minimum output is always:
 
@@ -11,131 +11,268 @@ Product Code / SKU
 Catalogue Page Number
 ```
 
-The tool is deliberately semi-guided. The user configures the catalogue-specific settings, and the extractor uses those settings to extract data safely. The core rule is:
+The purpose is to build a trusted SKU/page registry that can then drive later product-table extraction. The tool is deliberately **semi-guided**. Catalogue index layouts vary, so the user supplies catalogue-specific settings and the script produces both clean outputs and review evidence.
+
+The central safety rule is:
 
 ```text
-If a possible product code is found, keep it or flag it. Do not silently discard it.
+Do not silently lose product codes.
+Confirmed rows are used directly.
+Uncertain rows are retained and flagged for review.
 ```
 
 ---
 
-## 2. What changed in this version
+## 2. Files in the pack
 
-This version fixes the main issues seen in the previous runs:
+```text
+catalogue_index_extractor.py          # Main extraction engine
+catalogue_region_selector.py          # Visual PDF column selector / template builder
+CATALOGUE_INDEX_EXTRACTOR_GUIDE.md    # This guide
+example_config_gewiss_style.yaml      # Example config for Gewiss-style index pages
+requirements.txt                      # Python dependencies
+```
 
-| Previous problem | Change made |
+---
+
+## 3. Install requirements
+
+From the folder containing the scripts:
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+Dependencies:
+
+| Package | Purpose |
 |---|---|
-| Optional values could shift rows | Extraction is now row-first, not column-list pairing. |
-| Title rows like `DX 26` leaked into optional columns | Ignore-row patterns are applied before extracting required or optional values. |
-| `Pack/carton` values such as `AB 10/200` occurred | Optional columns can now have value regex validators and raw/clean/status outputs. |
-| Raw audit scanned too broadly | Raw SKU audit now scans only the detected SKU/Product Code column zones. |
-| Footer page numbers caused page mismatches | The extractor uses row-first SKU+page logic and requires a manual `data_bottom` table cutoff. |
-| Debug image generation failed on float coordinates | Debug overlay coordinates are rounded before drawing. |
-| Debug images were hard to interpret | Issue-page images now label detected zones, e.g. `B1 sku`, `B1 pack_carton`. |
-| Output had too many review files | Review/inspection outputs are now consolidated into one workbook. |
+| `pdfplumber` | Primary text/coordinate extraction engine |
+| `PyYAML` | YAML config loading/saving |
+| `Pillow` | Debug image support and GUI image display |
+| `openpyxl` | Review workbook output |
+| `PyMuPDF` | Visual selector PDF rendering |
 
 ---
 
-## 3. Scope
+## 4. Extraction modes
 
-### In scope
+The extractor now supports three modes.
 
-- One PDF at a time.
-- Selectable/extractable PDF text.
-- User-defined PDF index page range.
-- Vertically flowing index tables.
-- Multiple repeated table blocks on the same page.
-- Required extraction of SKU/Product Code and catalogue page.
-- Optional extraction of configured columns.
-- Manual table bottom cutoff.
-- Automatic or manual x-coordinate column boundaries.
-- Row-level validation groups.
-- Review workbook and issue-page debug images.
+| Mode | Config value | Purpose |
+|---|---|---|
+| Automatic header mode | `auto` | Finds configured headers and builds column zones automatically |
+| Terminal manual coordinates | `manual` | User types x/y boundaries in the terminal |
+| Visual template mode | `visual_template` | User draws column boxes on a PDF preview and applies those coordinates |
 
-### Out of scope
-
-- Scanned/OCR-only catalogues.
-- Automatic detection of the index range.
-- Fully autonomous extraction without user configuration.
+The existing automatic and manual modes are not deprecated. Visual template mode is an additional way to create safer manual coordinates.
 
 ---
 
-## 4. Core extraction model
+## 5. Recommended process
 
-The extractor now uses **row-first extraction**.
-
-Previous logic:
+For a new catalogue, use this sequence:
 
 ```text
-Extract every SKU in a column.
-Extract every page in a column.
-Extract every optional value in a column.
-Pair item 1 with item 1, item 2 with item 2, etc.
-```
-
-New logic:
-
-```text
-For each detected table block:
-  group PDF words into visual rows
-  for each visual row:
-    read the SKU column on that row
-    read the page column on that row
-    read optional columns on that row
-    keep the row only if a SKU is found
-    confirm it only if SKU and page are both found
-```
-
-This prevents rows such as `DX 26` from shifting every optional value underneath it.
-
----
-
-## 5. Primary engine
-
-The primary engine is **pdfplumber word-coordinate extraction**.
-
-The tool does not rely on Camelot tables because this use case needs precise control over:
-
-```text
-headers
-x-coordinates
-column zones
-visual rows
-raw SKU-column audit
-issue images
-manual configuration
+1. Create/edit a config file.
+2. Scan header layouts across the index pages.
+3. If one layout exists, draw one visual template.
+4. If multiple layouts exist, draw one visual template per layout/page group.
+5. Run extraction using visual_template mode or auto mode.
+6. Review sku_registry.csv and extraction_review_workbook.xlsx.
+7. Adjust config/template and rerun if needed.
 ```
 
 ---
 
-## 6. Required configuration
+## 6. Main run commands
 
-A run requires:
+### 6.1 Interactive setup
 
-| Config field | Meaning |
+```powershell
+py catalogue_index_extractor.py --interactive
+```
+
+This prompts for the required config and optionally saves a reusable config file.
+
+### 6.2 Run from config
+
+```powershell
+py catalogue_index_extractor.py --config "C:\Path\To\catalogue_index_config.yaml"
+```
+
+### 6.3 Override input/output/pages from config
+
+```powershell
+py catalogue_index_extractor.py --config "C:\Path\To\catalogue_index_config.yaml" --input "C:\Path\To\catalogue.pdf" --output "C:\Path\To\Output" --pages "1293-1364"
+```
+
+### 6.4 Terminal manual coordinate mode
+
+```powershell
+py catalogue_index_extractor.py --config "C:\Path\To\catalogue_index_config.yaml" --manual-coordinates
+```
+
+### 6.5 Scan unique header layouts
+
+```powershell
+py catalogue_index_extractor.py --config "C:\Path\To\catalogue_index_config.yaml" --scan-layouts
+```
+
+This writes:
+
+```text
+layout_scan_review.csv
+layout_scan_summary.csv
+layout_scan_summary.json
+```
+
+Use this before visual selection. If the scan shows multiple unique layouts, create one visual template per layout group.
+
+### 6.6 Run with one visual template
+
+```powershell
+py catalogue_index_extractor.py --config "C:\Path\To\catalogue_index_config.yaml" --visual-template "C:\Path\To\layout_1_template.json" --visual-template-pages "1293-1364"
+```
+
+The script attaches the template to the run config, switches to `visual_template` mode, and applies the drawn coordinates to the chosen pages.
+
+---
+
+## 7. Visual template workflow
+
+### 7.1 Open the visual selector
+
+```powershell
+py catalogue_region_selector.py --pdf "C:\Path\To\catalogue.pdf" --config "C:\Path\To\catalogue_index_config.yaml" --page 1312 --zoom 2.0 --output-template "C:\Path\To\layout_1_template.json" --output-config "C:\Path\To\catalogue_index_config_with_visual.yaml" --apply-pages "1293-1364"
+```
+
+### 7.2 What to draw
+
+For each repeated table block, draw one rectangle per column:
+
+```text
+block_1 sku
+block_1 pack_carton
+block_1 pallet
+block_1 page
+
+block_2 sku
+block_2 pack_carton
+block_2 pallet
+block_2 page
+
+block_3 sku
+block_3 pack_carton
+block_3 pallet
+block_3 page
+```
+
+Draw each rectangle so it includes:
+
+```text
+The column header
+The data below the header
+The bottom cutoff where table data should stop
+```
+
+The extractor validates that the required headers are inside the selected regions. If it finds the headers, it moves the data start point below the headers so duplicate header text is not extracted as a data row.
+
+### 7.3 GUI controls
+
+| Control | Purpose |
 |---|---|
-| `input_pdf` | PDF catalogue file to process. |
-| `output_folder` | Folder where outputs are written. |
-| `index_pdf_pages` | PDF page numbers containing the index. |
-| `required_columns.sku.header_text` | Exact header text for product codes. |
-| `required_columns.page.header_text` | Exact header text for catalogue pages. |
-| `expected_table_blocks_per_page` | Expected number of repeated SKU/page blocks per page. |
-| `sku_detection.positive_examples` | At least three valid product-code examples. |
-| `sku_detection.sku_regex` | Approved product-code regex. |
-| `advanced.data_bottom` | Required y-coordinate cutoff for the bottom of the index table. |
+| Prev Page / Next Page | Move between pages |
+| Page + Go | Jump to a PDF page |
+| Zoom + Apply Zoom | Re-render at a fixed zoom |
+| Drag on canvas | Select a rectangular region |
+| Region dialog | Assign block number, field name, alignment, inclusion mode |
+| Delete Last | Remove the last selected region |
+| Clear | Remove all selected regions |
+| Save Template | Save JSON template |
+| Save + Close | Save JSON and close |
 
-The PDF page number is the source of truth for selecting pages.
+### 7.4 Why the preview image is safe
+
+The visual selector renders the PDF page only so the user can draw boxes. Extraction still uses the original PDF text layer.
+
+Correct:
+
+```text
+Original PDF → rendered image preview → user boxes → original PDF text extraction
+```
+
+Incorrect:
+
+```text
+Original PDF → image → new image-only PDF → text extraction
+```
 
 ---
 
-## 7. Example config for Gewiss-style index pages
+## 8. Layout scanning logic
+
+The layout scanner processes every configured index PDF page and records where the configured headers appear.
+
+It uses the current config:
 
 ```yaml
-input_pdf: "C:/Path/To/gewiss-trade-catalogue.pdf"
+required_columns:
+  sku:
+    header_text: "Code"
+  page:
+    header_text: "Page"
+
+optional_columns:
+  - output_name: "pack_carton"
+    header_text: "Pack/carton"
+  - output_name: "pallet"
+    header_text: "Pallet"
+```
+
+For each page, the scanner attempts to build automatic column zones. It then creates a layout signature based on rounded coordinates.
+
+If the same headers appear at the same coordinates across many pages, those pages belong to one layout group. If the headers appear at different coordinates, those pages become a different layout group.
+
+### How to use the scan result
+
+Open `layout_scan_summary.csv`.
+
+| Column | Meaning |
+|---|---|
+| `layout_id` | Unique layout group |
+| `representative_pdf_page` | Page to use for drawing a visual template |
+| `pages` | Pages belonging to that layout |
+| `detected_table_blocks` | Number of SKU/page table blocks found |
+| `signature` | Rounded coordinate signature |
+
+If there is one layout group, draw one template.
+
+If there are multiple layout groups, draw one template for each representative page and set each template to apply only to that group’s pages.
+
+---
+
+## 9. Config file reference
+
+### 9.1 Required top-level settings
+
+```yaml
+input_pdf: "C:/Path/To/catalogue.pdf"
 output_folder: "C:/Path/To/Index Output"
 index_pdf_pages: "1293-1364"
 page_source_of_truth: "pdf_page_number"
+```
 
+| Setting | Meaning |
+|---|---|
+| `input_pdf` | PDF to process |
+| `output_folder` | Where outputs are written |
+| `index_pdf_pages` | 1-based PDF pages to process |
+| `page_source_of_truth` | Always `pdf_page_number` for this tool |
+
+### 9.2 Required columns
+
+```yaml
 required_columns:
   sku:
     header_text: "Code"
@@ -145,7 +282,13 @@ required_columns:
     header_text: "Page"
     alignment: "left"
     inclusion_mode: "left"
+```
 
+The `sku` and `page` columns are mandatory.
+
+### 9.3 Optional columns
+
+```yaml
 optional_columns:
   - output_name: "pack_carton"
     header_text: "Pack/carton"
@@ -159,29 +302,66 @@ optional_columns:
     inclusion_mode: "left"
     value_regex: "^[0-9]+$"
     invalid_value_action: "blank_and_warn"
+```
 
+Optional columns do not control row alignment. The extractor first identifies product rows using SKU + page, then reads optional values from the same visual row.
+
+Optional mismatches are warnings, not extraction errors.
+
+### 9.4 Expected table blocks
+
+```yaml
 expected_table_blocks_per_page: 3
+```
 
+If the page has three repeated index blocks but the tool detects only two, the page is flagged.
+
+### 9.5 Header matching
+
+```yaml
 header_matching:
   case_sensitive: false
+```
 
+If `false`, `Code`, `CODE`, and `code` are treated as equivalent.
+
+### 9.6 SKU detection
+
+```yaml
 sku_detection:
   positive_examples:
     - "GW 21 005"
     - "GW D3 674"
     - "DX 56 225"
-    - "DX 15 825 R"
-    - "GW 10 051 AB"
-    - "GW 10 159 F"
   negative_examples:
     - "DX 26"
     - "GW 21"
   sku_regex: "\\b(?:GW|DX)(?:[\\s\\-_/\\.]+[A-Z0-9]{1,8}){2,5}\\b"
+```
 
+At least three positive examples are required. Negative examples are used as design guidance and can also be represented in `ignore_row_patterns`.
+
+### 9.7 SKU rules
+
+```yaml
 sku_rules:
   uppercase_only: true
   allowed_characters: "A-Z0-9 space hyphen slash dot underscore plus"
+```
 
+If `uppercase_only` is true, lowercase characters are removed from the clean SKU after candidate extraction but retained in raw evidence.
+
+The output keeps both raw and normalized forms where relevant:
+
+```text
+sku_raw / source_sku_line_text
+sku
+sku_normalized
+```
+
+### 9.8 Page detection
+
+```yaml
 page_detection:
   positive_examples:
     - "344"
@@ -189,11 +369,32 @@ page_detection:
     - "12/13"
   page_regex: "(?i)\\b(?:see\\s+page\\s+)?[A-Z]?\\d+(?:\\s*(?:,|/|;|-)\\s*[A-Z]?\\d+)*\\b"
   keep_original_and_normalized: true
+```
 
+Page values are treated as text. The output keeps both original and normalized values.
+
+Examples:
+
+| Original | Normalized |
+|---|---|
+| `12/13` | `12;13` |
+| `12, 13` | `12;13` |
+| `A12` | `A12` |
+| `See page 12` | `12` |
+
+### 9.9 Ignore row patterns
+
+```yaml
 ignore_row_patterns:
   - "^DX\\s+\\d+$"
   - "^GW\\s+\\d+$"
+```
 
+These patterns catch section/title rows such as `DX 26` and `GW 21`. Such rows are ignored before optional columns are read, preventing values like `DX` or `26` from shifting into `pack_carton` and `pallet`.
+
+### 9.10 Validation groups
+
+```yaml
 example_validation_groups:
   - code: "DX 10 016 R"
     pack_carton: "100/6400"
@@ -202,18 +403,97 @@ example_validation_groups:
   - code: "GW 15 415"
     pack_carton: "1/12"
     page: "839"
+```
 
+Validation groups check that values came from the **same extracted row**. Optional values are checked only if supplied.
+
+A validation group can include only required fields:
+
+```yaml
+- code: "GW 21 005"
+  page: "1026"
+```
+
+or required plus optional fields:
+
+```yaml
+- code: "DX 10 016 R"
+  pack_carton: "100/6400"
+  pallet: "6400"
+  page: "344"
+```
+
+If a validation group fails, the relevant page is treated as needing review and gets a debug image when possible.
+
+### 9.11 Extraction mode
+
+```yaml
 extraction_mode: "auto"
+```
 
+Possible values:
+
+| Value | Meaning |
+|---|---|
+| `auto` | Detect headers and build zones automatically |
+| `manual` | Use `manual_coordinate_blocks` |
+| `visual_template` | Use `visual_template_sets` |
+
+### 9.12 Visual template sets
+
+This is usually written by the visual selector or by `--visual-template`.
+
+```yaml
+visual_template_sets:
+  - template_path: "C:/Path/To/layout_1_template.json"
+    template_name: "layout_1_template"
+    selection_pdf_page: 1312
+    apply_pdf_pages: "1293-1364"
+    coordinate_blocks:
+      - block_number: 1
+        block_x0: 15.0
+        block_x1: 245.0
+        data_top: 82.0
+        data_bottom: 760.0
+        columns:
+          sku:
+            x0: 15.0
+            x1: 90.0
+            header_text: "Code"
+            alignment: "left"
+            inclusion_mode: "left"
+          page:
+            x0: 220.0
+            x1: 245.0
+            header_text: "Page"
+            alignment: "left"
+            inclusion_mode: "left"
+```
+
+### 9.13 Debug images
+
+```yaml
 debug_images:
   enabled: true
   only_issue_pages: true
   label_zones: true
+```
 
+Debug images are generated only for issue pages. They show block boundaries, column zones, and labels such as `B1 sku`.
+
+### 9.14 Review files
+
+```yaml
 review_files:
   excel_safe: true
   write_separate_csvs: false
+```
 
+The main extracted files are always CSV. Review information is consolidated into an Excel workbook.
+
+### 9.15 Advanced settings
+
+```yaml
 advanced:
   header_y_tolerance: 6.0
   line_y_tolerance: 3.0
@@ -224,517 +504,267 @@ advanced:
   boundary_overlap_warning_threshold: 0.75
 ```
 
----
+| Setting | Meaning |
+|---|---|
+| `header_y_tolerance` | How close headers must be vertically to be treated as the same header row |
+| `line_y_tolerance` | How words are grouped into visual rows |
+| `data_start_padding` | Gap below detected header before data starts |
+| `x_tolerance` / `y_tolerance` | Passed to pdfplumber word extraction |
+| `data_bottom` | Manual bottom cutoff for table data |
+| `boundary_overlap_warning_threshold` | Controls boundary-overlap warnings |
 
-## 8. Header detection
-
-For every configured PDF page, the extractor searches for exact header text using pdfplumber word coordinates.
-
-Required headers:
-
-```text
-SKU/Product Code header
-Catalogue Page header
-```
-
-Optional headers are searched separately.
-
-Header matching can be case-sensitive or case-insensitive:
-
-```yaml
-header_matching:
-  case_sensitive: false
-```
+`data_bottom` is required. It prevents footers/page numbers below the table being extracted as data.
 
 ---
 
-## 9. Table block detection
+## 10. Alignment and inclusion mode
 
-The extractor pairs each SKU header with the nearest page header to its right on the same visual header line.
+### 10.1 Alignment
 
-Example:
+`alignment` describes how the column is visually aligned and helps build automatic boundaries from headers.
 
-```text
-Code ... Page     Code ... Page     Code ... Page
-```
-
-If `expected_table_blocks_per_page` is `3`, but the extractor finds `2`, the page is marked for review and a debug image is created.
-
----
-
-## 10. Column boundary logic
-
-The extractor uses header x-coordinates and the configured column alignments to build x-ranges.
-
-The goal is to avoid text from one column leaking into another.
-
-### Supported alignments
+Options:
 
 | Alignment | Meaning |
 |---|---|
-| `left` | Values are expected to begin near the left side of the column. |
-| `right` | Values are expected to end near the right side of the column. |
-| `center` | Values are centred; automatic boundaries are unsafe, so manual coordinates are requested. |
+| `left` | Values start near the left edge of the column |
+| `right` | Values end near the right edge of the column |
+| `center` | Values are centred |
+| `contained` | Strict bounding behaviour |
+| `majority` | Majority-overlap behaviour |
 
-### Automatic boundary rules
+### 10.2 Inclusion mode
 
-Assume Column 1 is left of Column 2.
+`inclusion_mode` decides whether a text fragment belongs inside a column zone.
 
-#### Column 1 left, Column 2 left
+Options:
 
-```text
-Column 1: from Column 1 header x0 to Column 2 header x0
-Column 2: starts at Column 2 header x0
+| Inclusion mode | Rule | Best for |
+|---|---|---|
+| `left` | Text left edge must be inside the column | Left-aligned columns |
+| `right` | Text right edge must be inside the column | Right-aligned columns |
+| `center` | Text centre must be inside the column | Centred values |
+| `contained` | Whole text must fit inside the column | Strict extraction |
+| `majority` | Most of the text must overlap the column | Balanced extraction |
+| `anchor_or_overlap` | Include by anchor, but flag overlap | Review-heavy safety mode |
+
+For Gewiss-style index pages where all values are left-aligned, use:
+
+```yaml
+alignment: "left"
+inclusion_mode: "left"
 ```
+
+### 10.3 Automatic boundary logic
+
+Automatic mode uses configured headers to create column zones.
+
+For left-aligned columns, the boundary starts at the header `x0` and ends at the next column header `x0`.
 
 Example:
 
 ```text
 Code starts at x=20
-Pack/carton starts at x=105
-
-Code zone = 20 to 105
-Pack/carton zone starts at 105
+Pack/carton starts at x=100
+Pallet starts at x=150
+Page starts at x=220
 ```
 
-#### Column 1 left, Column 2 right
+The zones become:
 
 ```text
-Column 1: from Column 1 header x0 to Column 2 header x0
-Column 2: starts at Column 2 header x0
+Code:        x=20  to x=100
+Pack/carton: x=100 to x=150
+Pallet:      x=150 to x=220
+Page:        x=220 to end of block
 ```
 
-#### Column 1 right, Column 2 left
+This prevents the SKU column from swallowing the next column's `10/200` value when the SKU is visually `GW 10 195 AB`.
 
-```text
-Column 1: from Column 1 header x0 to Column 2 header x0
-Column 2: starts at Column 2 header x0
-```
-
-#### Column 1 right, Column 2 right
-
-```text
-Column 1: from Column 1 header x0 to Column 1 header x1
-Column 2: starts at Column 1 header x1
-```
-
-#### Any centre-aligned column
-
-Automatic boundaries are not used. The script prompts for manual coordinate input, even when running from a saved config.
-
-The terminal prints example data-row coordinates to help the user define the x-ranges.
+If any involved column is centre-aligned, the script prompts for manual coordinates or uses visual template mode because centre alignment cannot be safely inferred from header x0 alone.
 
 ---
 
-## 11. Word inclusion and boundary review
+## 11. Row-first extraction logic
 
-The extractor never cuts text halfway. It only includes or excludes whole pdfplumber words.
+The current extractor uses row-first extraction.
 
-If a word crosses a column boundary, the word is still included. It is flagged only when the overlap is significant enough to be suspicious. The default warning threshold is:
-
-```yaml
-advanced:
-  boundary_overlap_warning_threshold: 0.75
-```
-
-This means a word is flagged when less than 75% of its width sits inside the column zone. This avoids noisy warnings where a value is visually correct but its PDF coordinates drift slightly over the header-derived boundary.
-
----
-
-## 12. SKU parsing and cleanup
-
-The SKU parser keeps:
-
-| Column | Meaning |
-|---|---|
-| `sku_raw` | Raw text seen in the SKU column. |
-| `sku` | Clean extracted SKU. |
-| `sku_normalized` | SKU stripped of punctuation/spaces and uppercased for matching. |
-
-When `uppercase_only: true`, lowercase letters are removed from the cleaned SKU candidate but preserved in `sku_raw`.
-
-This handles small symbol-like characters that appear as lowercase letters in extracted text.
-
-Unusual symbols are removed from the clean SKU according to `allowed_characters`.
-
----
-
-## 13. Preventing neighbouring-column leakage into SKU
-
-The SKU extractor can stop at values that match other configured column patterns.
-
-Example raw line:
+For each table block:
 
 ```text
-DX 10 020 R 100/5200
+1. Group PDF words into visual rows.
+2. For each row, read the SKU column.
+3. For the same row, read the Page column.
+4. If both SKU and Page exist, create a confirmed product row.
+5. Read optional columns from that same row only.
+6. If optional values fail validation, blank/warn them without shifting rows.
 ```
 
-With `pack_carton.value_regex` set to:
-
-```regex
-^[0-9]+(?:/[0-9]+)*$
-```
-
-The token `100/5200` is recognised as a Pack/carton value, so the SKU is kept as:
+This avoids the old problem where a title row like `DX 26` could cause:
 
 ```text
-DX 10 020 R
+pack_carton = DX
+pallet = 26
 ```
+
+because optional columns no longer create row alignment.
 
 ---
 
-## 14. Page value extraction
+## 12. Raw SKU-column audit
 
-The page column is treated as text.
+The raw audit scans only the selected/detected SKU column zones, not the full page.
 
-Supported examples:
+This means:
 
 ```text
-344
-839
-A12
-12/13
-12, 13
-12-13
-See page 12
+Raw SKU not in structured
 ```
 
-Outputs preserve both:
-
-| Output | Meaning |
-|---|---|
-| `catalogue_page_original` | Raw extracted page value. |
-| `catalogue_page_normalized` | Normalized value for matching. |
-
-Examples:
-
-| Original | Normalized |
-|---|---|
-| `12, 13` | `12;13` |
-| `12/13` | `12;13` |
-| `See page 12` | `12` |
-| `A12` | `A12` |
-
----
-
-## 15. Required bottom cutoff
-
-The user must define:
-
-```yaml
-advanced:
-  data_bottom: 760
-  boundary_overlap_warning_threshold: 0.75
-```
-
-This is the bottom y-coordinate of the index table. It prevents footer page numbers or other bottom-of-page text from being treated as index data.
-
-The cutoff is global for all index pages in this version.
-
----
-
-## 16. Optional column validation
-
-Optional columns can define a regex. If no regex is supplied, any text in that optional column is accepted.
-
-For Gewiss-style quantity columns:
-
-```yaml
-pack_carton:
-  value_regex: "^[0-9]+(?:/[0-9]+)*$"
-
-pallet:
-  value_regex: "^[0-9]+$"
-```
-
-This accepts:
+now means:
 
 ```text
-10/200
-100/6400
-60/4620
-18000
-6400
+A SKU-like candidate was found inside the SKU/Product Code column zone but was not confirmed as a structured SKU/page row.
 ```
 
-and rejects:
-
-```text
-AB 10/200
-DX
-GW
-DX 10
-```
-
-Rejected optional values do not make the product row fail. They are warnings, not required issues.
-
-Each optional column has:
-
-| Column | Meaning |
-|---|---|
-| `<name>_raw` | Raw text extracted from the optional column. |
-| `<name>` | Clean validated value. |
-| `<name>_status` | `confirmed`, `missing`, `invalid_blank`, or `invalid_kept`. |
+It no longer includes SKU-like text from notes, captions, descriptions, logos, or unrelated areas outside the SKU column.
 
 ---
 
-## 17. Title/section rows
+## 13. Outputs
 
-Title rows can appear inside table blocks, for example:
-
-```text
-DX 26
-GW 21
-```
-
-These are not product rows.
-
-Use `ignore_row_patterns` to remove them before required and optional column extraction:
-
-```yaml
-ignore_row_patterns:
-  - "^DX\\s+\\d+$"
-  - "^GW\\s+\\d+$"
-```
-
-This prevents title-row text from becoming Pack/carton or Pallet values.
-
----
-
-## 18. Raw SKU-column audit
-
-The raw text audit now scans only detected SKU/Product Code column zones.
-
-It does **not** scan:
-
-- descriptions;
-- notes;
-- image captions;
-- optional columns;
-- full-page raw text.
-
-The audit checks whether a SKU-like candidate found in the SKU column is present in structured SKU+page rows.
-
-If not, it is added to the registry as:
-
-```text
-source_method = sku_column_raw_audit
-confidence_status = needs_review
-required_issues = raw_sku_column_candidate_not_in_structured_rows
-```
-
----
-
-## 19. Validation groups
-
-Validation groups check that configured values appear in the **same extracted row**.
-
-Example:
-
-```yaml
-example_validation_groups:
-  - code: "DX 10 016 R"
-    pack_carton: "100/6400"
-    pallet: "6400"
-    page: "344"
-
-  - code: "GW 15 415"
-    pack_carton: "1/12"
-    page: "839"
-```
-
-Rules:
-
-- `code` is required.
-- `page` is recommended.
-- Optional fields are checked only when supplied.
-- A missing optional field in the validation group is not a failure.
-- If the group fails, it appears in the workbook and the related page is treated as needing review when identifiable.
-
-This is specifically designed to catch row-shift problems where, for example, a section title is accidentally read as `pack_carton`.
-
----
-
-## 20. Output files
-
-The output set is intentionally reduced.
-
-### Main data files
+### 13.1 Main extracted CSVs
 
 ```text
 sku_registry.csv
 index_rows.csv
 ```
 
-These are UTF-8 CSV files.
+`sku_registry.csv` contains one row per unique SKU. Use this as the input to the next product extraction stage.
 
-`sku_registry.csv` is one row per unique SKU. Use it as the driver for the next product extraction stage.
+`index_rows.csv` contains row-level SKU/page occurrences and optional column values.
 
-`index_rows.csv` is one row per extracted SKU/page occurrence.
-
-### Review workbook
+### 13.2 Review workbook
 
 ```text
 extraction_review_workbook.xlsx
 ```
 
-All review and inspection data is consolidated into this workbook.
+Sheets:
 
-### Debug images
+| Sheet | Purpose |
+|---|---|
+| Run Summary | Counts and high-level status |
+| Page Diagnostics | One row per processed page with issues/warnings |
+| Index Rows Review | Row-level extraction details |
+| Unresolved Rows | Rows needing review |
+| Raw SKU Column Audit | SKU candidates found inside SKU column zones |
+| Header Detection | Header locations detected/validated |
+| Validation Groups | Results for supplied validation groups |
+| Extractor Errors | Errors raised during processing |
+
+### 13.3 Debug images
 
 ```text
 debug_images/
 ```
 
-Only pages with required issues or raw audit issues get debug images.
+Images are created only for pages with required issues or raw audit issues. They show detected or selected column zones.
 
-### Config used
+### 13.4 Config used
 
 ```text
 catalogue_index_config_used.yaml
 ```
 
-This preserves the exact config used for the run.
+This preserves the exact settings used for the run.
 
 ---
 
-## 21. Review workbook sheets
+## 14. How to review the output
 
-### Run Summary
+### Step 1 — Open `Run Summary`
 
-High-level run counts:
+Check:
 
-| Metric | Meaning |
+| Metric | Desired result |
 |---|---|
-| `sku_registry_rows` | Number of unique SKUs in the registry. |
-| `index_rows` | Row-level extraction count. |
-| `unresolved_rows` | Rows requiring review. |
-| `pages_processed` | Number of PDF pages processed. |
-| `pages_needing_review` | Pages with required/raw audit issues. |
-| `sku_column_raw_audit_rows` | Raw SKU-column audit candidate rows. |
-| `raw_audit_candidates_added` | Raw audit candidates added to registry. |
-| `extractor_errors` | Unexpected extraction errors. |
+| `sku_registry_rows` | Should be close to expected catalogue SKU count |
+| `unresolved_rows` | Ideally low, but not necessarily zero |
+| `pages_needing_review` | Reviewable count |
+| `extractor_errors` | Should be zero |
 
-### Page Diagnostics
+### Step 2 — Open `Page Diagnostics`
 
-Page-level health check.
-
-Important columns:
+Key columns:
 
 | Column | Meaning |
 |---|---|
-| `status` | `ok` or `needs_review`. |
-| `expected_table_blocks` | User-configured expected block count. |
-| `detected_table_blocks` | Detected block count. |
-| `structured_rows` | Extracted row count on the page. |
-| `structured_confirmed_rows` | Rows with SKU and page extracted cleanly. |
-| `sku_column_raw_audit_rows` | SKU candidates found in SKU columns. |
-| `sku_column_raw_audit_unaccounted` | SKU-column candidates not in structured rows. |
-| `required_issues` | Serious SKU/page/block problems. |
-| `optional_warnings` | Non-blocking optional column problems. |
-| `raw_audit_issues` | Raw SKU-column audit issues. |
-| `debug_image_path` | Debug image for issue pages. |
+| `status` | `ok` or `needs_review` |
+| `detected_table_blocks` | Blocks found/used |
+| `structured_rows` | Confirmed + review rows |
+| `required_issues` | SKU/page/block issues |
+| `optional_warnings` | Optional column warnings only |
+| `raw_audit_issues` | SKU-column audit issues |
+| `debug_image_path` | Image to inspect |
 
-Issue cells contain actual line breaks for readability.
+Issue cells use line breaks for readability.
 
-### Index Rows Review
+### Step 3 — Open `Validation Groups`
 
-Row-level detail for every extracted occurrence.
+Every configured validation group should be `found`.
 
-Use this sheet when a SKU registry row needs tracing back to the source page and row.
+If a group fails, it means the exact row combination was not extracted correctly.
 
-### Unresolved Rows
+### Step 4 — Open debug image for issue pages
 
-Rows that require manual review.
+Check whether:
 
-Common causes:
+- the `sku` region covers only product codes;
+- the `page` region covers only page numbers;
+- the bottom cutoff excludes the printed page footer;
+- headers are inside selected boxes if using visual template mode.
 
-- SKU found but page missing.
-- Boundary overlap in required columns.
-- Raw SKU-column candidate not in structured rows.
-- Optional value invalid or blanked.
+### Step 5 — Inspect `Raw SKU Column Audit`
 
-### Raw SKU Column Audit
+If a raw audit candidate is not in structured rows, check whether:
 
-Shows SKU-like candidates found only in the SKU/Product Code column zones.
-
-Use this to verify the extractor has not missed product codes.
-
-### Header Detection
-
-Shows detected header coordinates.
-
-Useful when:
-
-- expected table blocks do not match detected blocks;
-- column boundaries look wrong;
-- manual coordinate mode may be required.
-
-### Validation Groups
-
-Shows whether configured row validation groups were found.
-
-### Extractor Errors
-
-Unexpected runtime/page-level extraction errors.
+- the row is missing a page value;
+- the SKU regex is too broad;
+- the selected SKU region includes non-product text;
+- a title row is not covered by `ignore_row_patterns`.
 
 ---
 
-## 22. Debug images
+## 15. Troubleshooting examples
 
-Debug images are generated only for issue pages.
+### Problem: `AB 10/200` appears in `pack_carton`
 
-They show:
-
-- table block boundary in red;
-- column zones in blue;
-- labels such as `B1 sku`, `B1 pack_carton`, `B1 pallet`, `B1 page`.
-
-Use them to verify:
-
-- the SKU column starts and ends correctly;
-- the optional columns do not overlap SKU values;
-- the page column excludes footer text due to `data_bottom`;
-- detected blocks match the visual page.
-
----
-
-## 23. How to review a run
-
-1. Open `extraction_review_workbook.xlsx`.
-2. Check `Run Summary`.
-3. Open `Page Diagnostics` and filter `status = needs_review`.
-4. For each issue page, open the linked debug image.
-5. If block count is wrong, check `Header Detection`.
-6. If raw SKU audit found unaccounted candidates, check `Raw SKU Column Audit`.
-7. If optional values look wrong, check `_raw`, clean value, and `_status` fields in `Index Rows Review`.
-8. Check `Validation Groups`; all critical examples should be `found`.
-9. Re-run after editing config.
-10. Use `sku_registry.csv` once review is acceptable.
-
----
-
-## 24. Troubleshooting
-
-### Problem: `AB 10/200` appears in Pack/carton
-
-Likely cause:
-
-- SKU suffix leaked into the Pack/carton zone.
-- Column boundary is too far left/right.
+Likely cause: column boundaries or row grouping included the SKU suffix and the next column value together.
 
 Fixes:
 
-- Confirm `alignment: left` for all Gewiss columns.
-- Check the debug image.
-- Use manual coordinates if needed.
-- Keep `pack_carton.value_regex` enabled so invalid values are blanked and warned.
+- use row-first v3/v4 logic;
+- set `pack_carton.value_regex` to numeric/slash only;
+- use `alignment: left` and `inclusion_mode: left`;
+- use visual template mode to draw exact pack/carton boundaries.
 
-### Problem: `DX 26` becomes Pack/carton/Pallet
+### Problem: printed index page number is read as a page value
 
-Likely cause:
+Likely cause: table bottom cutoff includes the footer.
 
-- Section title row was extracted as optional data.
+Fix:
+
+```yaml
+advanced:
+  data_bottom: 760
+```
+
+or draw visual regions so their bottom edge stops above the footer.
+
+### Problem: `DX 26` becomes optional column data
+
+Likely cause: section/title rows are being read as table data.
 
 Fix:
 
@@ -744,74 +774,78 @@ ignore_row_patterns:
   - "^GW\\s+\\d+$"
 ```
 
-### Problem: Printed page footer appears in page column
+### Problem: one visual template does not work on all pages
 
-Fix:
+Run:
 
-- Set `advanced.data_bottom` to the bottom of the table, above the footer.
-
-### Problem: Centre-aligned columns
-
-Automatic boundaries are unsafe. The script prompts for manual x-ranges.
-
-### Problem: Debug image says float cannot be interpreted as integer
-
-Fixed in this version. Overlay coordinates are rounded before drawing.
-
----
-
-## 25. Recommended Gewiss settings
-
-For the Gewiss catalogue index, start with:
-
-```yaml
-required_columns:
-  sku:
-    header_text: "Code"
-    alignment: "left"
-    inclusion_mode: "left"
-  page:
-    header_text: "Page"
-    alignment: "left"
-    inclusion_mode: "left"
-
-optional_columns:
-  - output_name: "pack_carton"
-    header_text: "Pack/carton"
-    alignment: "left"
-    inclusion_mode: "left"
-    value_regex: "^[0-9]+(?:/[0-9]+)*$"
-    invalid_value_action: "blank_and_warn"
-  - output_name: "pallet"
-    header_text: "Pallet"
-    alignment: "left"
-    inclusion_mode: "left"
-    value_regex: "^[0-9]+$"
-    invalid_value_action: "blank_and_warn"
-
-sku_rules:
-  uppercase_only: true
-  allowed_characters: "A-Z0-9 space hyphen slash dot underscore plus"
-
-ignore_row_patterns:
-  - "^DX\\s+\\d+$"
-  - "^GW\\s+\\d+$"
+```powershell
+py catalogue_index_extractor.py --config config.yaml --scan-layouts
 ```
 
+If multiple layout groups appear, draw one template per group and apply each to its corresponding pages.
+
 ---
 
-## 26. Summary
+## 16. Visual-template multi-layout example
 
-The strategy is now:
+If the scanner finds two layouts:
 
 ```text
-Use exact headers to locate table blocks.
-Use configured alignment to build column boundaries.
-Use row-first extraction so optional data cannot shift rows.
-Keep raw and clean values for auditability.
-Validate optional columns without making them required issues.
-Audit only the SKU column for missed product-code candidates.
-Use validation groups to confirm full row correctness.
-Generate issue-page debug images with labelled zones.
-Output two CSVs plus one review workbook.
+layout_1 pages: 1293-1320
+layout_2 pages: 1321-1364
+```
+
+Draw two templates:
+
+```powershell
+py catalogue_region_selector.py --pdf catalogue.pdf --config config.yaml --page 1293 --output-template layout_1.json --output-config config_visual_1.yaml --apply-pages "1293-1320"
+
+py catalogue_region_selector.py --pdf catalogue.pdf --config config_visual_1.yaml --page 1321 --output-template layout_2.json --output-config config_visual_2.yaml --apply-pages "1321-1364"
+```
+
+Then run:
+
+```powershell
+py catalogue_index_extractor.py --config config_visual_2.yaml
+```
+
+---
+
+## 17. Acceptance checklist
+
+A good run should have:
+
+```text
+sku_registry.csv generated
+index_rows.csv generated
+extraction_review_workbook.xlsx generated
+extractor_errors = 0
+validation groups found
+issue pages reviewed using debug images
+no unexplained raw SKU-column audit misses
+```
+
+---
+
+## 18. Summary
+
+The extractor now has three complementary modes:
+
+```text
+auto            = fast header-based extraction
+manual          = terminal coordinate entry
+visual_template = user-drawn boxes on a PDF preview
+```
+
+The core extraction logic remains shared and stable:
+
+```text
+PDF words with coordinates
+→ table blocks / selected visual regions
+→ row-first SKU + Page extraction
+→ optional column extraction from the same row
+→ optional validation
+→ SKU-column-only raw audit
+→ review workbook + debug images
+→ one-row-per-SKU registry
 ```

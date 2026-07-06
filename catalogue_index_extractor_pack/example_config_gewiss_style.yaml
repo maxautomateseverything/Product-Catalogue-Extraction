@@ -87,5 +87,5 @@ advanced:
   data_start_padding: 1.0
   x_tolerance: 1
   y_tolerance: 3
-  data_bottom: 802.445
+  data_bottom: 760
   boundary_overlap_warning_threshold: 0.75

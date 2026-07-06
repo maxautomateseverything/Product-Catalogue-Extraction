@@ -622,10 +622,36 @@ def detect_auto_blocks(page_width: float, pdf_page: int, words: Sequence[Dict[st
     return blocks, header_records
 
 
+
 def manual_blocks_from_config(page_width: float, page_height: float, pdf_page: int, config: Dict[str, Any]) -> List[TableBlock]:
+    """Build reusable coordinate blocks from terminal/manual config."""
+    return blocks_from_coordinate_block_configs(
+        page_width=page_width,
+        page_height=page_height,
+        pdf_page=pdf_page,
+        block_configs=config.get("manual_coordinate_blocks", []) or [],
+        config=config,
+        detection_mode="manual",
+    )
+
+
+def blocks_from_coordinate_block_configs(
+    page_width: float,
+    page_height: float,
+    pdf_page: int,
+    block_configs: Sequence[Dict[str, Any]],
+    config: Dict[str, Any],
+    detection_mode: str,
+) -> List[TableBlock]:
+    """Convert saved coordinate block dictionaries into TableBlock objects.
+
+    This is used by both terminal manual mode and visual-template mode. The
+    visual selector produces the same coordinate-block shape as the existing
+    manual coordinate mode so the row-first extraction engine remains shared.
+    """
     blocks: List[TableBlock] = []
-    data_bottom = float(config.get("advanced", {}).get("data_bottom", page_height))
-    for idx, block_cfg in enumerate(config.get("manual_coordinate_blocks", []) or [], start=1):
+    fallback_data_bottom = float(config.get("advanced", {}).get("data_bottom", page_height))
+    for idx, block_cfg in enumerate(block_configs, start=1):
         zones: Dict[str, ColumnZone] = {}
         for field_name, z in (block_cfg.get("columns", {}) or {}).items():
             zones[field_name] = ColumnZone(
@@ -637,22 +663,264 @@ def manual_blocks_from_config(page_width: float, page_height: float, pdf_page: i
                 inclusion_mode=str(z.get("inclusion_mode", z.get("alignment", field_alignment(config, field_name)))).lower(),
                 value_regex=str(z.get("value_regex", "") or ""),
                 boundary_warning_threshold=float(config.get("advanced", {}).get("boundary_overlap_warning_threshold", 0.75)),
-                header_found=False,
+                header_found=bool(z.get("header_found", False)),
             )
         all_xs = [x for z in zones.values() for x in (z.x0, z.x1)] or [0.0, page_width]
         blocks.append(TableBlock(
-            block_number=idx,
+            block_number=int(block_cfg.get("block_number", idx)),
             pdf_page=pdf_page,
             block_x0=float(block_cfg.get("block_x0", min(all_xs))),
             block_x1=float(block_cfg.get("block_x1", max(all_xs))),
             header_top=float(block_cfg.get("data_top", 0.0)),
             header_bottom=float(block_cfg.get("data_top", 0.0)),
             data_top=float(block_cfg.get("data_top", 0.0)),
-            data_bottom=float(block_cfg.get("data_bottom", data_bottom)),
+            data_bottom=float(block_cfg.get("data_bottom", fallback_data_bottom)),
             column_zones=zones,
-            detection_mode="manual",
+            detection_mode=detection_mode,
         ))
     return blocks
+
+
+def load_visual_template(path: Path) -> Dict[str, Any]:
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_visual_template_set_to_config(
+    config: Dict[str, Any],
+    template_path: Path,
+    apply_pdf_pages: Optional[str] = None,
+) -> None:
+    """Attach a visual template to the extractor config.
+
+    A visual template is produced by catalogue_region_selector.py. It stores
+    rectangles drawn on a PDF preview. This function converts those rectangles
+    into the same manual-coordinate-block structure used by the extractor.
+    """
+    template = load_visual_template(template_path)
+    regions = template.get("regions", []) or []
+    if not regions:
+        raise SystemExit(f"Visual template contains no regions: {template_path}")
+
+    grouped: Dict[int, List[Dict[str, Any]]] = defaultdict(list)
+    for region in regions:
+        if str(region.get("type", "table_column")) != "table_column":
+            continue
+        field = str(region.get("field", "")).strip()
+        if not field:
+            continue
+        block_number = int(region.get("block_number", 1))
+        grouped[block_number].append(region)
+
+    coordinate_blocks: List[Dict[str, Any]] = []
+    for block_number in sorted(grouped):
+        regs = grouped[block_number]
+        columns: Dict[str, Dict[str, Any]] = {}
+        for reg in regs:
+            field = str(reg["field"])
+            col_cfg = column_config_by_field(config, field) or {}
+            columns[field] = {
+                "x0": float(reg["x0"]),
+                "x1": float(reg["x1"]),
+                "header_text": col_cfg.get("header_text", field_header_text(config, field)),
+                "alignment": reg.get("alignment", col_cfg.get("alignment", field_alignment(config, field))),
+                "inclusion_mode": reg.get("inclusion_mode", col_cfg.get("inclusion_mode", field_inclusion_mode(config, field))),
+                "value_regex": reg.get("value_regex", col_cfg.get("value_regex", "") or ""),
+                "header_found": False,
+            }
+        all_x0 = [float(r["x0"]) for r in regs]
+        all_x1 = [float(r["x1"]) for r in regs]
+        all_y0 = [float(r["y0"]) for r in regs]
+        all_y1 = [float(r["y1"]) for r in regs]
+        coordinate_blocks.append({
+            "block_number": block_number,
+            "block_x0": min(all_x0),
+            "block_x1": max(all_x1),
+            "data_top": min(all_y0),
+            "data_bottom": max(all_y1),
+            "columns": columns,
+        })
+
+    required_fields = {"sku", "page"}
+    missing_by_block = []
+    for block in coordinate_blocks:
+        fields = set(block.get("columns", {}).keys())
+        missing = sorted(required_fields - fields)
+        if missing:
+            missing_by_block.append(f"block_{block.get('block_number')}:missing_required_fields={','.join(missing)}")
+    if missing_by_block:
+        raise SystemExit("Visual template is missing required regions: " + "; ".join(missing_by_block))
+
+    config.setdefault("visual_template_sets", [])
+    config["visual_template_sets"].append({
+        "template_path": str(template_path),
+        "template_name": template.get("template_name", template_path.stem),
+        "source_pdf": template.get("source_pdf", ""),
+        "selection_pdf_page": template.get("selection_pdf_page", template.get("page", "")),
+        "apply_pdf_pages": apply_pdf_pages or template.get("apply_pdf_pages") or config.get("index_pdf_pages", ""),
+        "coordinate_blocks": coordinate_blocks,
+        "page_geometry": template.get("page_geometry", {}),
+    })
+    config["extraction_mode"] = "visual_template"
+
+
+def page_in_range_string(pdf_page: int, page_range: str) -> bool:
+    try:
+        return int(pdf_page) in set(parse_page_range(page_range))
+    except Exception:
+        return False
+
+
+def visual_template_blocks_from_config(page_width: float, page_height: float, pdf_page: int, config: Dict[str, Any]) -> List[TableBlock]:
+    for template_set in config.get("visual_template_sets", []) or []:
+        apply_pages = str(template_set.get("apply_pdf_pages", "") or config.get("index_pdf_pages", ""))
+        if page_in_range_string(pdf_page, apply_pages):
+            return blocks_from_coordinate_block_configs(
+                page_width=page_width,
+                page_height=page_height,
+                pdf_page=pdf_page,
+                block_configs=template_set.get("coordinate_blocks", []) or [],
+                config=config,
+                detection_mode="visual_template",
+            )
+    return []
+
+
+def column_config_by_field(config: Dict[str, Any], field: str) -> Dict[str, Any]:
+    if field in {"sku", "page"}:
+        return dict((config.get("required_columns", {}) or {}).get(field, {}) or {})
+    for col in config.get("optional_columns", []) or []:
+        if col.get("output_name") == field:
+            return dict(col)
+    return {}
+
+
+def validate_visual_headers_and_adjust_data_top(
+    words: Sequence[Dict[str, Any]],
+    blocks: Sequence[TableBlock],
+    config: Dict[str, Any],
+    pdf_page: int,
+) -> Tuple[List[str], List[str], List[Dict[str, Any]]]:
+    """Validate that expected headers appear inside visual regions.
+
+    If a header is found inside a selected column region, the block's data_top is
+    moved below the lowest found header. This prevents selected header text being
+    extracted as a data row.
+    """
+    case_sensitive = bool(config.get("header_matching", {}).get("case_sensitive", False))
+    padding = float(config.get("advanced", {}).get("data_start_padding", 1.0))
+    required_issues: List[str] = []
+    optional_warnings: List[str] = []
+    header_records: List[Dict[str, Any]] = []
+    for block in blocks:
+        found_bottoms: List[float] = []
+        for field, zone in block.column_zones.items():
+            expected_header = field_header_text(config, field)
+            zone_words = []
+            for word in words:
+                cx, cy = word_center(word)
+                if zone.x0 <= cx <= zone.x1 and block.data_top <= cy <= block.data_bottom:
+                    zone_words.append(word)
+            matches = find_exact_header_occurrences(zone_words, expected_header, field, pdf_page, case_sensitive, y_tolerance=3.0)
+            if matches:
+                h = sorted(matches, key=lambda m: m.top)[0]
+                found_bottoms.append(h.bottom)
+                zone.header_found = True
+                header_records.append({
+                    "source_pdf_page": pdf_page,
+                    "field_name": field,
+                    "header_text": expected_header,
+                    "x0": round(h.x0, 3),
+                    "x1": round(h.x1, 3),
+                    "top": round(h.top, 3),
+                    "bottom": round(h.bottom, 3),
+                    "center_x": round(h.center_x, 3),
+                    "center_y": round(h.center_y, 3),
+                    "detection_mode": "visual_template_header_validation",
+                    "source_table_block": block.block_number,
+                })
+            else:
+                if field in {"sku", "page"}:
+                    required_issues.append(f"block_{block.block_number}:visual_template_required_header_not_found:{field}={expected_header}")
+                else:
+                    optional_warnings.append(f"block_{block.block_number}:visual_template_optional_header_not_found:{field}={expected_header}")
+        if found_bottoms:
+            new_top = max(found_bottoms) + padding
+            if new_top > block.data_top and new_top < block.data_bottom:
+                block.header_bottom = max(found_bottoms)
+                block.data_top = new_top
+                for zone in block.column_zones.values():
+                    pass
+    return required_issues, optional_warnings, header_records
+
+
+# =============================================================================
+# Header layout scan
+# =============================================================================
+
+
+def scan_header_layouts(config: Dict[str, Any], output_folder: Optional[Path] = None) -> Dict[str, Any]:
+    """Scan configured index pages and group unique header-coordinate layouts.
+
+    This does not extract product rows. It helps the user decide whether one
+    visual template is enough or whether different page layouts need separate
+    drawn templates.
+    """
+    validate_config(config)
+    input_pdf = Path(config["input_pdf"])
+    pages = parse_page_range(config["index_pdf_pages"])
+    output_folder = output_folder or Path(config["output_folder"])
+    output_folder.mkdir(parents=True, exist_ok=True)
+    records: List[Dict[str, Any]] = []
+    layout_groups: Dict[str, Dict[str, Any]] = {}
+    log("Scanning header layouts across configured index pages.")
+    with pdfplumber.open(str(input_pdf)) as pdf:
+        for pdf_page in pages:
+            if pdf_page < 1 or pdf_page > len(pdf.pages):
+                continue
+            page = pdf.pages[pdf_page - 1]
+            words = page.extract_words(
+                x_tolerance=config.get("advanced", {}).get("x_tolerance", 1),
+                y_tolerance=config.get("advanced", {}).get("y_tolerance", 3),
+                keep_blank_chars=False,
+                use_text_flow=False,
+            )
+            try:
+                blocks, header_records = detect_auto_blocks(float(page.width), pdf_page, words, float(page.height), config)
+            except Exception as exc:
+                records.append({"source_pdf_page": pdf_page, "layout_status": "error", "error": repr(exc)})
+                continue
+            sig_parts = []
+            for block in blocks:
+                for field in sorted(block.column_zones):
+                    z = block.column_zones[field]
+                    sig_parts.append(f"B{block.block_number}:{field}:{round(z.x0,1)}-{round(z.x1,1)}")
+            signature = "|".join(sig_parts) or "NO_BLOCKS"
+            layout_groups.setdefault(signature, {
+                "layout_id": f"layout_{len(layout_groups)+1}",
+                "signature": signature,
+                "representative_pdf_page": pdf_page,
+                "pages": [],
+                "detected_table_blocks": len(blocks),
+            })["pages"].append(pdf_page)
+            records.append({
+                "source_pdf_page": pdf_page,
+                "layout_id": layout_groups[signature]["layout_id"],
+                "detected_table_blocks": len(blocks),
+                "signature": signature,
+                "recommended_action": "draw_one_visual_template_for_this_layout" if signature != "NO_BLOCKS" else "check_header_config_or_use_manual_visual_template",
+            })
+    groups = list(layout_groups.values())
+    for g in groups:
+        g["page_count"] = len(g["pages"])
+        g["pages"] = ",".join(str(p) for p in g["pages"])
+    write_csv(output_folder / "layout_scan_review.csv", records)
+    write_csv(output_folder / "layout_scan_summary.csv", groups)
+    with (output_folder / "layout_scan_summary.json").open("w", encoding="utf-8") as f:
+        json.dump({"layouts": groups, "page_records": records}, f, indent=2, ensure_ascii=False)
+    log(f"Layout scan complete. Unique layouts found: {len(groups)}")
+    log(f"Layout scan files written to: {output_folder}")
+    return {"layouts": groups, "page_records": records}
 
 
 # =============================================================================
@@ -1249,8 +1517,8 @@ def validate_config(config: Dict[str, Any]) -> None:
         raise SystemExit("At least 3 positive SKU examples are required.")
     if "advanced" not in config or "data_bottom" not in config["advanced"]:
         raise SystemExit("Config advanced.data_bottom is required. This is the manual bottom cutoff for the index table.")
-    if has_center_aligned_columns(config) and config.get("extraction_mode") != "manual":
-        log("Centre-aligned column detected. Manual coordinate mode is required for safe extraction.")
+    if has_center_aligned_columns(config) and config.get("extraction_mode") not in {"manual", "visual_template"}:
+        log("Centre-aligned column detected. Manual or visual-template coordinate mode is required for safe extraction.")
         prompt_manual_blocks(config)
 
 
@@ -1307,9 +1575,21 @@ def run_extraction(config: Dict[str, Any]) -> Dict[str, Any]:
                     keep_blank_chars=False,
                     use_text_flow=False,
                 )
-                if config.get("extraction_mode", "auto") == "manual":
+                mode = config.get("extraction_mode", "auto")
+                if mode == "manual":
                     blocks = manual_blocks_from_config(float(page.width), float(page.height), pdf_page, config)
                     header_records: List[Dict[str, Any]] = []
+                elif mode == "visual_template":
+                    blocks = visual_template_blocks_from_config(float(page.width), float(page.height), pdf_page, config)
+                    header_records = []
+                    if not blocks:
+                        required_issues.append("visual_template_not_defined_for_page")
+                    else:
+                        vis_req, vis_opt, vis_headers = validate_visual_headers_and_adjust_data_top(words, blocks, config, pdf_page)
+                        required_issues.extend(vis_req)
+                        optional_warnings.extend(vis_opt)
+                        header_records.extend(vis_headers)
+                        header_detection.extend(vis_headers)
                 else:
                     blocks, header_records = detect_auto_blocks(float(page.width), pdf_page, words, float(page.height), config)
                     header_detection.extend(header_records)
@@ -1594,6 +1874,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--output", type=str, help="Override output_folder from config.")
     parser.add_argument("--pages", type=str, help="Override index_pdf_pages from config.")
     parser.add_argument("--manual-coordinates", action="store_true", help="Prompt for manual coordinate blocks before running.")
+    parser.add_argument("--visual-template", type=str, help="Path to visual template JSON created by catalogue_region_selector.py.")
+    parser.add_argument("--visual-template-pages", type=str, help="PDF page range that the visual template should apply to. Defaults to index_pdf_pages.")
+    parser.add_argument("--scan-layouts", action="store_true", help="Scan configured index pages for unique header-coordinate layouts and exit.")
     return parser.parse_args(argv)
 
 
@@ -1611,9 +1894,14 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         config["index_pdf_pages"] = args.pages
     if args.manual_coordinates:
         prompt_manual_blocks(config)
+    if args.visual_template:
+        save_visual_template_set_to_config(config, Path(args.visual_template), args.visual_template_pages)
     output_folder = Path(config["output_folder"])
     output_folder.mkdir(parents=True, exist_ok=True)
     save_config(config, output_folder / "catalogue_index_config_used.yaml")
+    if args.scan_layouts:
+        scan_header_layouts(config, output_folder)
+        return
     run_extraction(config)
 
 

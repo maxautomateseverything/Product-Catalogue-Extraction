@@ -1,0 +1,78 @@
+input_pdf: "C:/Users/max.yoong/OneDrive - Edmundson Electrical Ltd/Product Data - Documents/1 - Pentaho/X - Max Yoong/7. Catalogue/Catalogue_PDFs/LED Group Robus/ROBUS UK & IRE 2026 CATALOGUE.pdf"
+
+output_folder: "C:/Users/max.yoong/OneDrive - Edmundson Electrical Ltd/Product Data - Documents/1 - Pentaho/X - Max Yoong/7. Catalogue/Catalogue_PDFs/LED Group Robus/Headerless Index Output"
+
+index_pdf_pages: "590-596"
+
+page_source_of_truth: "pdf_page_number"
+
+# Key settings for visual extraction process.
+extraction_mode: "visual_template"
+
+required_columns:
+  sku:
+    header_text: "NO_HEADER_SKU"
+    alignment: "left"
+    inclusion_mode: "left"
+
+  page:
+    header_text: "NO_HEADER_PAGE"
+    alignment: "left"
+    inclusion_mode: "left"
+
+optional_columns: []
+
+expected_table_blocks_per_page: 3
+
+header_matching:
+  case_sensitive: false
+
+sku_detection:
+  positive_examples:
+    - "RTW0330C-24"
+    - "RVC4K675"
+    - "RAAS"
+  negative_examples: []
+  # Regex means capture full non empty line inside the defined region.
+  sku_regex: "\\S(?:.*\\S)?"
+
+sku_rules:
+  uppercase_only: true
+  remove_lowercase_from_clean_sku: true
+  preserve_raw_sku: true
+  allowed_characters_regex: "[A-Z0-9\\s\\-_/\\.]"
+
+page_detection:
+  positive_examples: []
+  page_regex: ""
+  keep_original_and_normalized: true
+
+ignore_row_patterns: []
+
+example_validation_groups:
+  - code: "RTW0330C-24"
+    page: "378"
+
+  - code: "RVC4K675"
+    page: "112"
+
+# Key settings for visual extraction process.
+visual_template:
+  require_headers_inside_regions: false
+  start_data_below_header: false
+
+visual_template_sets: []
+
+debug_images:
+  enabled: true
+  only_issue_pages: true
+
+review_files:
+  excel_safe: true
+  write_separate_csvs: false
+
+advanced:
+  line_y_tolerance: 3.0
+  data_bottom: 9999
+  x_tolerance: 1
+  y_tolerance: 3

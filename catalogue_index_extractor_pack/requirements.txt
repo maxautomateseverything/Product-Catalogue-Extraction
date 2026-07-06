@@ -2,3 +2,4 @@ pdfplumber
 PyYAML
 Pillow
 openpyxl
+PyMuPDF
