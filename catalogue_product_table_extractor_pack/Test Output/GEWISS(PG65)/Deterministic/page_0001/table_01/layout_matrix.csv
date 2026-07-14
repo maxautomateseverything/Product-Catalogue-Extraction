@@ -1,0 +1,21 @@
+﻿,Rated,"INPUT
+Rated",,,C,OUPLER OUTPU,TS
+Type,"current
+(In)","Voltage
+(Un)",Poles,"Reference
+h","No. 2 socket-
+outlets 16A","No. 3 socket-
+outlets 16A","No. 3 socket-
+outlets 32A"
+,,100 130 V,2P+E,4,GW 64 008,GW 64 022,
+,,÷,3P+E,4,,GW 64 023,
+,,,2P+E,6,GW 64 010,GW 64 024,
+Without,16 A,200 ÷ 250 V,3P+E,9,GW 64 011,GW 64 025,
+cable,,,3P+N+E,9,GW 64 012,GW 64 026,
+,,380 415 V,3P+E,9,GW 64 013,GW 64 027,
+,,÷,3P+N+E,6,GW 64 014,GW 64 028,
+,32 A,380 ÷ 415 V,3P+E,6,,,GW 64 068
+,,100 ÷ 130 V,2P+E,4,,GW 64 050,
+With,16 A,200 ÷ 250 V,2P+E,6,,GW 64 052,
+cable,,380 415 V,3P+E,6,,GW 64 055,
+,,÷,3P+N+E,6,,GW 64 056,

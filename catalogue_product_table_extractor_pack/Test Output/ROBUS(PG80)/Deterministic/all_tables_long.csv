@@ -1,0 +1,19 @@
+﻿source_pdf,page,table,method,row_index,column_index,column_name,value
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,1,1,DIMENSIONS (mm),RVA3K1
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,1,2,Length,1000
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,1,3,Height/Depth Width,2 8
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,2,1,DIMENSIONS (mm),RVA4K1
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,2,2,Length,1000
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,2,3,Height/Depth Width,2 8
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,3,1,DIMENSIONS (mm),RVA3K3
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,3,2,Length,3000
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,3,3,Height/Depth Width,2 8
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,4,1,DIMENSIONS (mm),RVA4K3
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,4,2,Length,3000
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,4,3,Height/Depth Width,2 8
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,5,1,DIMENSIONS (mm),RVA3K5
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,5,2,Length,5000
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,5,3,Height/Depth Width,2 8
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,6,1,DIMENSIONS (mm),RVA4K5
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,6,2,Length,5000
+ROBUS(PG80).pdf,1,1,pymupdf4llm_layout_normalized,6,3,Height/Depth Width,2 8

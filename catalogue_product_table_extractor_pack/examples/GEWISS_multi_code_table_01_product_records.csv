@@ -1,0 +1,19 @@
+﻿product_code,code_position,source_page,source_table,source_rows,source_columns,code_column,INPUT | Poles,INPUT | Rated current (In),INPUT | Rated Voltage (Un),INPUT | Reference h,INPUT | Type
+GW 64 008,multiple_codes_in_row,1,1,1,6,COUPLER OUTPUTS | No. 2 socket- outlets 16A,2P+E,16 A,100 ÷ 130 V,4,Without cable
+GW 64 010,multiple_codes_in_row,1,1,3,6,COUPLER OUTPUTS | No. 2 socket- outlets 16A,2P+E,16 A,200 ÷ 250 V,6,Without cable
+GW 64 011,multiple_codes_in_row,1,1,4,6,COUPLER OUTPUTS | No. 2 socket- outlets 16A,3P+E,16 A,200 ÷ 250 V,9,Without cable
+GW 64 012,multiple_codes_in_row,1,1,5,6,COUPLER OUTPUTS | No. 2 socket- outlets 16A,3P+N+E,16 A,200 ÷ 250 V,9,Without cable
+GW 64 013,multiple_codes_in_row,1,1,6,6,COUPLER OUTPUTS | No. 2 socket- outlets 16A,3P+E,16 A,380 ÷ 415 V,9,Without cable
+GW 64 014,multiple_codes_in_row,1,1,7,6,COUPLER OUTPUTS | No. 2 socket- outlets 16A,3P+N+E,16 A,380 ÷ 415 V,6,Without cable
+GW 64 022,multiple_codes_in_row,1,1,1,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,2P+E,16 A,100 ÷ 130 V,4,Without cable
+GW 64 023,internal_matrix_cell,1,1,2,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+E,16 A,100 ÷ 130 V,4,Without cable
+GW 64 024,multiple_codes_in_row,1,1,3,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,2P+E,16 A,200 ÷ 250 V,6,Without cable
+GW 64 025,multiple_codes_in_row,1,1,4,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+E,16 A,200 ÷ 250 V,9,Without cable
+GW 64 026,multiple_codes_in_row,1,1,5,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+N+E,16 A,200 ÷ 250 V,9,Without cable
+GW 64 027,multiple_codes_in_row,1,1,6,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+E,16 A,380 ÷ 415 V,9,Without cable
+GW 64 028,multiple_codes_in_row,1,1,7,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+N+E,16 A,380 ÷ 415 V,6,Without cable
+GW 64 050,internal_matrix_cell,1,1,9,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,2P+E,16 A,100 ÷ 130 V,4,With cable
+GW 64 052,internal_matrix_cell,1,1,10,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,2P+E,16 A,200 ÷ 250 V,6,With cable
+GW 64 055,internal_matrix_cell,1,1,11,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+E,16 A,380 ÷ 415 V,6,With cable
+GW 64 056,internal_matrix_cell,1,1,12,7,COUPLER OUTPUTS | No. 3 socket- outlets 16A,3P+N+E,16 A,380 ÷ 415 V,6,With cable
+GW 64 068,right_row_index,1,1,8,8,COUPLER OUTPUTS | No. 3 socket- outlets 32A,3P+E,32 A,380 ÷ 415 V,6,Without cable

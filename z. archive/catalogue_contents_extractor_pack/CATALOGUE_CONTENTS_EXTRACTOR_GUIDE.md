@@ -460,6 +460,8 @@ page_number:
   position: "trailing"
 ```
 
+Use "trailling" when page number is to the right and "leading " when to the left.
+
 ### 12.1 Supported page-number formats
 
 The default regex supports:

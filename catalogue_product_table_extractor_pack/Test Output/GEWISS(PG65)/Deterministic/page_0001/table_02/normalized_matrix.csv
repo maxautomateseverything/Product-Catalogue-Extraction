@@ -1,0 +1,24 @@
+﻿INPUT,INPUT,INPUT,INPUT,OUTLETS,OUTLETS,OUTLETS,OUTLETS
+"Rated
+current
+(In)","Rated
+Voltage
+(Un)",Poles,"Reference
+h",No. 3 socket-outlets,No. 3 socket-outlets,No. 3 socket-outlets,Code
+"Rated
+current
+(In)","Rated
+Voltage
+(Un)",Poles,"Reference
+h","2P+E
+230 V~","3P+E
+400 V~","3P+N+E
+400 V~","3P+N+E
+400 V~"
+16 A,380 ÷ 415 V,3P+N+E,6,2x16A,,1x16A,GW 64 059
+16 A,380 ÷ 415 V,3P+N+E,6,1x16A,1x16A,1x16A,GW 64 060
+32 A,200 ÷ 250 V,2P+E,6,3x16A,,,GW 64 062
+32 A,380 ÷ 415 V,3P+N+E,6,1x16A,1x16A,1x16A,GW 64 063
+32 A,380 ÷ 415 V,3P+N+E,6,2x16A,,1x32A,GW 64 064
+32 A,380 ÷ 415 V,3P+N+E,6,1x32A,1x32A,1x32A,GW 64 061
+63 A,380 ÷ 415 V,3P+N+E,6,2x32A,,1x63A,GW 64 065

@@ -1,0 +1,10 @@
+{
+  "status": "deterministic",
+  "deterministic_source": "pymupdf4llm_layout",
+  "grid_match": {
+    "selected": false,
+    "reason": "No compatible line-grid table with reliable merged placeholders."
+  },
+  "merged_cells_expanded": 0,
+  "review_reasons": []
+}

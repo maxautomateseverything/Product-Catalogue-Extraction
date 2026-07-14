@@ -1,0 +1,184 @@
+[
+  {
+    "direction": "horizontal",
+    "row": 1,
+    "column": 2,
+    "origin_column": 1,
+    "value": "INPUT"
+  },
+  {
+    "direction": "horizontal",
+    "row": 1,
+    "column": 3,
+    "origin_column": 1,
+    "value": "INPUT"
+  },
+  {
+    "direction": "horizontal",
+    "row": 1,
+    "column": 4,
+    "origin_column": 1,
+    "value": "INPUT"
+  },
+  {
+    "direction": "horizontal",
+    "row": 1,
+    "column": 6,
+    "origin_column": 5,
+    "value": "OUTLETS"
+  },
+  {
+    "direction": "horizontal",
+    "row": 1,
+    "column": 7,
+    "origin_column": 5,
+    "value": "OUTLETS"
+  },
+  {
+    "direction": "horizontal",
+    "row": 1,
+    "column": 8,
+    "origin_column": 5,
+    "value": "OUTLETS"
+  },
+  {
+    "direction": "horizontal",
+    "row": 2,
+    "column": 6,
+    "origin_column": 5,
+    "value": "No. 3 socket-outlets"
+  },
+  {
+    "direction": "horizontal",
+    "row": 2,
+    "column": 7,
+    "origin_column": 5,
+    "value": "No. 3 socket-outlets"
+  },
+  {
+    "direction": "horizontal",
+    "row": 3,
+    "column": 8,
+    "origin_column": 7,
+    "value": "3P+N+E\n400 V~"
+  },
+  {
+    "direction": "vertical",
+    "row": 3,
+    "column": 1,
+    "origin_row": 2,
+    "value": "Rated\ncurrent\n(In)"
+  },
+  {
+    "direction": "vertical",
+    "row": 5,
+    "column": 1,
+    "origin_row": 4,
+    "value": "16 A"
+  },
+  {
+    "direction": "vertical",
+    "row": 7,
+    "column": 1,
+    "origin_row": 6,
+    "value": "32 A"
+  },
+  {
+    "direction": "vertical",
+    "row": 8,
+    "column": 1,
+    "origin_row": 6,
+    "value": "32 A"
+  },
+  {
+    "direction": "vertical",
+    "row": 9,
+    "column": 1,
+    "origin_row": 6,
+    "value": "32 A"
+  },
+  {
+    "direction": "vertical",
+    "row": 3,
+    "column": 2,
+    "origin_row": 2,
+    "value": "Rated\nVoltage\n(Un)"
+  },
+  {
+    "direction": "vertical",
+    "row": 5,
+    "column": 2,
+    "origin_row": 4,
+    "value": "380 ÷ 415 V"
+  },
+  {
+    "direction": "vertical",
+    "row": 8,
+    "column": 2,
+    "origin_row": 7,
+    "value": "380 ÷ 415 V"
+  },
+  {
+    "direction": "vertical",
+    "row": 9,
+    "column": 2,
+    "origin_row": 7,
+    "value": "380 ÷ 415 V"
+  },
+  {
+    "direction": "vertical",
+    "row": 3,
+    "column": 3,
+    "origin_row": 2,
+    "value": "Poles"
+  },
+  {
+    "direction": "vertical",
+    "row": 5,
+    "column": 3,
+    "origin_row": 4,
+    "value": "3P+N+E"
+  },
+  {
+    "direction": "vertical",
+    "row": 8,
+    "column": 3,
+    "origin_row": 7,
+    "value": "3P+N+E"
+  },
+  {
+    "direction": "vertical",
+    "row": 9,
+    "column": 3,
+    "origin_row": 7,
+    "value": "3P+N+E"
+  },
+  {
+    "direction": "vertical",
+    "row": 3,
+    "column": 4,
+    "origin_row": 2,
+    "value": "Reference\nh"
+  },
+  {
+    "direction": "vertical",
+    "row": 5,
+    "column": 4,
+    "origin_row": 4,
+    "value": "6"
+  },
+  {
+    "direction": "vertical",
+    "row": 8,
+    "column": 4,
+    "origin_row": 7,
+    "value": "6"
+  },
+  {
+    "direction": "vertical",
+    "row": 9,
+    "column": 4,
+    "origin_row": 7,
+    "value": "6"
+  }
+]
