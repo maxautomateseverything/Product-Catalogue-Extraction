@@ -1,0 +1,2366 @@
+[
+  {
+    "join_id": "p1_t1__p2_t1",
+    "status": "auto_joined",
+    "confidence": 1.0,
+    "score_details": {
+      "score": 1.0,
+      "reasons": [
+        "Consecutive PDF pages.",
+        "Primary table contains shared attributes and multiple SKU columns.",
+        "Secondary table is a compatible SKU matrix.",
+        "Compressed primary row groups exactly match secondary SKU rows.",
+        "Header-family overlap 0.50.",
+        "Secondary table contributes right-side applications."
+      ],
+      "primary_run_count": 56,
+      "secondary_row_count": 56,
+      "row_count_exact": true,
+      "row_count_similarity": 1.0,
+      "header_overlap": 0.5,
+      "contradiction": false
+    },
+    "primary": {
+      "page": 1,
+      "table": 1
+    },
+    "secondary": {
+      "page": 2,
+      "table": 1
+    },
+    "row_mappings": [
+      {
+        "primary_rows": [
+          2
+        ],
+        "secondary_row": 2,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "100 ÷ 130 V"
+          ],
+          [
+            "reference_h",
+            "4"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 001 FH",
+          "GW 60 001 H",
+          "GW 60 023 FH",
+          "GW 60 023 H"
+        ],
+        "secondary_skus": [
+          "GW 62 001 FH",
+          "GW 62 001 H",
+          "GW 62 023 FH",
+          "GW 62 023 H",
+          "GW 62 201 FH",
+          "GW 62 201 H",
+          "GW 62 224 FH",
+          "GW 62 224 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          3
+        ],
+        "secondary_row": 3,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "100 ÷ 130 V"
+          ],
+          [
+            "reference_h",
+            "4"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 002 FH",
+          "GW 60 002 H",
+          "GW 60 024 FH",
+          "GW 60 024 H"
+        ],
+        "secondary_skus": [
+          "GW 62 002 FH",
+          "GW 62 002 H",
+          "GW 62 024 FH",
+          "GW 62 024 H",
+          "GW 62 202 FH",
+          "GW 62 202 H",
+          "GW 62 225 FH",
+          "GW 62 225 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          4
+        ],
+        "secondary_row": 4,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "100 ÷ 130 V"
+          ],
+          [
+            "reference_h",
+            "4"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 003 FH",
+          "GW 60 003 H",
+          "GW 60 025 FH",
+          "GW 60 025 H"
+        ],
+        "secondary_skus": [
+          "GW 62 003 FH",
+          "GW 62 003 H",
+          "GW 62 025 FH",
+          "GW 62 025 H",
+          "GW 62 203 FH",
+          "GW 62 203 H",
+          "GW 62 226 FH",
+          "GW 62 226 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          5
+        ],
+        "secondary_row": 5,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "200 ÷ 250 V"
+          ],
+          [
+            "reference_h",
+            "6"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 004 FH",
+          "GW 60 004 H",
+          "GW 60 026 FH",
+          "GW 60 026 H"
+        ],
+        "secondary_skus": [
+          "GW 62 004 FH",
+          "GW 62 004 H",
+          "GW 62 026 FH",
+          "GW 62 026 H",
+          "GW 62 205 FH",
+          "GW 62 205 H",
+          "GW 62 227 FH",
+          "GW 62 227 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          6,
+          7
+        ],
+        "secondary_row": 6,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "200 ÷ 250 V"
+          ],
+          [
+            "reference_h",
+            "9"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 005 FH",
+          "GW 60 005 H",
+          "GW 60 027 FH",
+          "GW 60 027 H",
+          "GW 60 005 FH",
+          "GW 60 005 WH",
+          "GW 60 027 FH",
+          "GW 60 027 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 005 FH",
+          "GW 62 005 H",
+          "GW 62 027 FH",
+          "GW 62 027 H",
+          "GW 62 206 FH",
+          "GW 62 206 H",
+          "GW 62 228 FH",
+          "GW 62 228 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          8,
+          9
+        ],
+        "secondary_row": 7,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "200 ÷ 250 V"
+          ],
+          [
+            "reference_h",
+            "9"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 006 FH",
+          "GW 60 006 H",
+          "GW 60 028 FH",
+          "GW 60 028 H",
+          "GW 60 006 FH",
+          "GW 60 006 WH",
+          "GW 60 028 FH",
+          "GW 60 028 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 006 FH",
+          "GW 62 006 H",
+          "GW 62 028 FH",
+          "GW 62 028 H",
+          "GW 62 207 FH",
+          "GW 62 207 H",
+          "GW 62 229 FH",
+          "GW 62 229 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          10
+        ],
+        "secondary_row": 8,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "380 ÷ 415 V"
+          ],
+          [
+            "reference_h",
+            "9"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 007 FH",
+          "GW 60 007 H",
+          "GW 60 029 FH",
+          "GW 60 029 H"
+        ],
+        "secondary_skus": [
+          "GW 62 007 FH",
+          "GW 62 007 H",
+          "GW 62 029 FH",
+          "GW 62 029 H",
+          "GW 62 208 FH",
+          "GW 62 208 H",
+          "GW 62 230 FH",
+          "GW 62 230 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          11,
+          12
+        ],
+        "secondary_row": 9,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "380 ÷ 415 V"
+          ],
+          [
+            "reference_h",
+            "6"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 008 FH",
+          "GW 60 008 H",
+          "GW 60 030 FH",
+          "GW 60 030 H",
+          "GW 60 008 FH",
+          "GW 60 008 WH",
+          "GW 60 030 FH",
+          "GW 60 030 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 008 FH",
+          "GW 62 008 H",
+          "GW 62 030 FH",
+          "GW 62 030 H",
+          "GW 62 209 FH",
+          "GW 62 209 H",
+          "GW 62 231 FH",
+          "GW 62 231 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          13,
+          14
+        ],
+        "secondary_row": 10,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "380 ÷ 415 V"
+          ],
+          [
+            "reference_h",
+            "6"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 009 FH",
+          "GW 60 009 H",
+          "GW 60 031 FH",
+          "GW 60 031 H",
+          "GW 60 009 FH",
+          "GW 60 009 WH",
+          "GW 60 031 FH",
+          "GW 60 031 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 009 FH",
+          "GW 62 009 H",
+          "GW 62 031 FH",
+          "GW 62 031 H",
+          "GW 62 210 FH",
+          "GW 62 210 H",
+          "GW 62 232 FH",
+          "GW 62 232 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          15
+        ],
+        "secondary_row": 11,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "480 ÷ 500 V"
+          ],
+          [
+            "reference_h",
+            "7"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 701 H",
+          "GW 60 735 H"
+        ],
+        "secondary_skus": [
+          "GW 62 701 H",
+          "GW 62 735 H",
+          "GW 62 801 H",
+          "GW 62 835 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          16
+        ],
+        "secondary_row": 12,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "480 ÷ 500 V"
+          ],
+          [
+            "reference_h",
+            "7"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 010 H",
+          "GW 60 032 H"
+        ],
+        "secondary_skus": [
+          "GW 62 010 H",
+          "GW 62 032 H",
+          "GW 62 211 H",
+          "GW 62 233 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          17
+        ],
+        "secondary_row": 13,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "480 ÷ 500 V"
+          ],
+          [
+            "reference_h",
+            "7"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 011 H",
+          "GW 60 033 H"
+        ],
+        "secondary_skus": [
+          "GW 62 011 H",
+          "GW 62 033 H",
+          "GW 62 212 H",
+          "GW 62 234 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          18
+        ],
+        "secondary_row": 14,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "600 ÷ 690 V"
+          ],
+          [
+            "reference_h",
+            "5"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 702 H",
+          "GW 60 736 H"
+        ],
+        "secondary_skus": [
+          "GW 62 702 H",
+          "GW 62 736 H",
+          "GW 62 802 H",
+          "GW 62 836 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          19
+        ],
+        "secondary_row": 15,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "600 ÷ 690 V"
+          ],
+          [
+            "reference_h",
+            "5"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 703 H",
+          "GW 60 737 H"
+        ],
+        "secondary_skus": [
+          "GW 62 703 H",
+          "GW 62 737 H",
+          "GW 62 803 H",
+          "GW 62 837 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          20
+        ],
+        "secondary_row": 16,
+        "shared_key": [
+          [
+            "frequency",
+            "100 ÷ 300 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "10"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 704 H",
+          "GW 60 738 H"
+        ],
+        "secondary_skus": [
+          "GW 62 704 H",
+          "GW 62 738 H",
+          "GW 62 804 H",
+          "GW 62 838 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          21
+        ],
+        "secondary_row": 17,
+        "shared_key": [
+          [
+            "frequency",
+            "100 ÷ 300 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "10"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 705 H",
+          "GW 60 739 H"
+        ],
+        "secondary_skus": [
+          "GW 62 705 H",
+          "GW 62 739 H",
+          "GW 62 805 H",
+          "GW 62 839 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          22
+        ],
+        "secondary_row": 18,
+        "shared_key": [
+          [
+            "frequency",
+            "100 ÷ 300 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "10"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 706 H",
+          "GW 60 740 H"
+        ],
+        "secondary_skus": [
+          "GW 62 706 H",
+          "GW 62 740 H",
+          "GW 62 806 H",
+          "GW 62 840 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          23
+        ],
+        "secondary_row": 19,
+        "shared_key": [
+          [
+            "frequency",
+            "> 300 ÷ 500 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "2"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 707 H",
+          "GW 60 741 H"
+        ],
+        "secondary_skus": [
+          "GW 62 707 H",
+          "GW 62 741 H",
+          "GW 62 807 H",
+          "GW 62 841 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          24
+        ],
+        "secondary_row": 20,
+        "shared_key": [
+          [
+            "frequency",
+            "> 300 ÷ 500 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "2"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 708 H",
+          "GW 60 742 H"
+        ],
+        "secondary_skus": [
+          "GW 62 708 H",
+          "GW 62 742 H",
+          "GW 62 808 H",
+          "GW 62 842 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          25
+        ],
+        "secondary_row": 21,
+        "shared_key": [
+          [
+            "frequency",
+            "> 300 ÷ 500 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "2"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 709 H",
+          "GW 60 743 H"
+        ],
+        "secondary_skus": [
+          "GW 62 709 H",
+          "GW 62 743 H",
+          "GW 62 809 H",
+          "GW 62 843 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          26
+        ],
+        "secondary_row": 22,
+        "shared_key": [
+          [
+            "frequency",
+            "60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "440 ÷ 460 V"
+          ],
+          [
+            "reference_h",
+            "11"
+          ]
+        ],
+        "applications": "Marine, port and naval, installations",
+        "primary_skus": [
+          "GW 60 710 H",
+          "GW 60 744 H"
+        ],
+        "secondary_skus": [
+          "GW 62 710 H",
+          "GW 62 744 H",
+          "GW 62 810 H",
+          "GW 62 844 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          27
+        ],
+        "secondary_row": 23,
+        "shared_key": [
+          [
+            "frequency",
+            "60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "440 ÷ 460 V"
+          ],
+          [
+            "reference_h",
+            "11"
+          ]
+        ],
+        "applications": "Marine, port and naval, installations",
+        "primary_skus": [
+          "GW 60 711 H",
+          "GW 60 745 H"
+        ],
+        "secondary_skus": [
+          "GW 62 711 H",
+          "GW 62 745 H",
+          "GW 62 811 H",
+          "GW 62 845 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          28
+        ],
+        "secondary_row": 24,
+        "shared_key": [
+          [
+            "frequency",
+            "50 Hz / 60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "380 V / 440 V"
+          ],
+          [
+            "reference_h",
+            "3"
+          ]
+        ],
+        "applications": "Refrigeretion containers",
+        "primary_skus": [
+          "GW 60 712 H",
+          "GW 60 746 H"
+        ],
+        "secondary_skus": [
+          "GW 62 712 H",
+          "GW 62 746 H",
+          "GW 62 812 H",
+          "GW 62 846 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          29
+        ],
+        "secondary_row": 25,
+        "shared_key": [
+          [
+            "frequency",
+            "50 Hz / 60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "380 V / 440 V"
+          ],
+          [
+            "reference_h",
+            "3"
+          ]
+        ],
+        "applications": "Refrigeretion containers",
+        "primary_skus": [
+          "GW 60 713 H",
+          "GW 60 747 H"
+        ],
+        "secondary_skus": [
+          "GW 62 713 H",
+          "GW 62 747 H",
+          "GW 62 813 H",
+          "GW 62 847 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          30
+        ],
+        "secondary_row": 26,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "transf."
+          ],
+          [
+            "reference_h",
+            "12"
+          ]
+        ],
+        "applications": "Isolation transformers",
+        "primary_skus": [
+          "GW 60 714 H",
+          "GW 60 748 H"
+        ],
+        "secondary_skus": [
+          "GW 62 714 H",
+          "GW 62 748 H",
+          "GW 62 814 H",
+          "GW 62 848 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          31
+        ],
+        "secondary_row": 27,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "transf."
+          ],
+          [
+            "reference_h",
+            "12"
+          ]
+        ],
+        "applications": "Isolation transformers",
+        "primary_skus": [
+          "GW 60 715 H",
+          "GW 60 749 H"
+        ],
+        "secondary_skus": [
+          "GW 62 715 H",
+          "GW 62 749 H",
+          "GW 62 815 H",
+          "GW 62 849 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          32
+        ],
+        "secondary_row": 28,
+        "shared_key": [
+          [
+            "frequency",
+            "dc"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 ÷ 250V"
+          ],
+          [
+            "reference_h",
+            "3"
+          ]
+        ],
+        "applications": "Use in direct current",
+        "primary_skus": [
+          "GW 60 716 H",
+          "GW 60 750 H"
+        ],
+        "secondary_skus": [
+          "GW 62 716 H",
+          "GW 62 750 H",
+          "GW 62 816 H",
+          "GW 62 850 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          33
+        ],
+        "secondary_row": 29,
+        "shared_key": [
+          [
+            "frequency",
+            "dc"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "16 A"
+          ],
+          [
+            "rated_voltage",
+            "> 250V"
+          ],
+          [
+            "reference_h",
+            "8"
+          ]
+        ],
+        "applications": "Use in direct current",
+        "primary_skus": [
+          "GW 60 717 H",
+          "GW 60 751 H"
+        ],
+        "secondary_skus": [
+          "GW 62 717 H",
+          "GW 62 751 H",
+          "GW 62 817 H",
+          "GW 62 851 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          34
+        ],
+        "secondary_row": 30,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "100 ÷ 130 V"
+          ],
+          [
+            "reference_h",
+            "4"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 012 FH",
+          "GW 60 012 H",
+          "GW 60 034 FH",
+          "GW 60 034 H"
+        ],
+        "secondary_skus": [
+          "GW 62 012 FH",
+          "GW 62 012 H",
+          "GW 62 034 FH",
+          "GW 62 034 H",
+          "GW 62 213 FH",
+          "GW 62 213 H",
+          "GW 62 235 FH",
+          "GW 62 235 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          35
+        ],
+        "secondary_row": 31,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "100 ÷ 130 V"
+          ],
+          [
+            "reference_h",
+            "4"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 013 FH",
+          "GW 60 013 H",
+          "GW 60 035 FH",
+          "GW 60 035 H"
+        ],
+        "secondary_skus": [
+          "GW 62 013 FH",
+          "GW 62 013 H",
+          "GW 62 035 FH",
+          "GW 62 035 H",
+          "GW 62 214 FH",
+          "GW 62 214 H",
+          "GW 62 236 FH",
+          "GW 62 236 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          36
+        ],
+        "secondary_row": 32,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "100 ÷ 130 V"
+          ],
+          [
+            "reference_h",
+            "4"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 014 FH",
+          "GW 60 014 H",
+          "GW 60 036 FH",
+          "GW 60 036 H"
+        ],
+        "secondary_skus": [
+          "GW 62 014 FH",
+          "GW 62 014 H",
+          "GW 62 036 FH",
+          "GW 62 036 H",
+          "GW 62 215 FH",
+          "GW 62 215 H",
+          "GW 62 237 FH",
+          "GW 62 237 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          37
+        ],
+        "secondary_row": 33,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "200 ÷ 250 V"
+          ],
+          [
+            "reference_h",
+            "6"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 015 FH",
+          "GW 60 015 H",
+          "GW 60 037 FH",
+          "GW 60 037 H"
+        ],
+        "secondary_skus": [
+          "GW 62 015 FH",
+          "GW 62 015 H",
+          "GW 62 037 FH",
+          "GW 62 037 H",
+          "GW 62 216 FH",
+          "GW 62 216 H",
+          "GW 62 238 FH",
+          "GW 62 238 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          38,
+          39
+        ],
+        "secondary_row": 34,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "200 ÷ 250 V"
+          ],
+          [
+            "reference_h",
+            "9"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 016 FH",
+          "GW 60 016 H",
+          "GW 60 038 FH",
+          "GW 60 038 H",
+          "GW 60 016 FH",
+          "GW 60 016 WH",
+          "GW 60 038 FH",
+          "GW 60 038 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 016 FH",
+          "GW 62 016 H",
+          "GW 62 038 FH",
+          "GW 62 038 H",
+          "GW 62 217 FH",
+          "GW 62 217 H",
+          "GW 62 239 FH",
+          "GW 62 239 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          40,
+          41
+        ],
+        "secondary_row": 35,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "200 ÷ 250 V"
+          ],
+          [
+            "reference_h",
+            "9"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 017 FH",
+          "GW 60 017 H",
+          "GW 60 039 FH",
+          "GW 60 039 H",
+          "GW 60 017 FH",
+          "GW 60 017 WH",
+          "GW 60 039 FH",
+          "GW 60 039 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 017 FH",
+          "GW 62 017 H",
+          "GW 62 039 FH",
+          "GW 62 039 H",
+          "GW 62 218 FH",
+          "GW 62 218 H",
+          "GW 62 240 FH",
+          "GW 62 240 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          42
+        ],
+        "secondary_row": 36,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "380 ÷ 415 V"
+          ],
+          [
+            "reference_h",
+            "9"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 018 FH",
+          "GW 60 018 H",
+          "GW 60 040 FH",
+          "GW 60 040 H"
+        ],
+        "secondary_skus": [
+          "GW 62 018 FH",
+          "GW 62 018 H",
+          "GW 62 040 FH",
+          "GW 62 040 H",
+          "GW 62 219 FH",
+          "GW 62 219 H",
+          "GW 62 241 FH",
+          "GW 62 241 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          43,
+          44
+        ],
+        "secondary_row": 37,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "380 ÷ 415 V"
+          ],
+          [
+            "reference_h",
+            "6"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 019 FH",
+          "GW 60 019 H",
+          "GW 60 041 FH",
+          "GW 60 041 H",
+          "GW 60 019 FH",
+          "GW 60 019 WH",
+          "GW 60 041 FH",
+          "GW 60 041 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 019 FH",
+          "GW 62 019 H",
+          "GW 62 041 FH",
+          "GW 62 041 H",
+          "GW 62 220 FH",
+          "GW 62 220 H",
+          "GW 62 242 FH",
+          "GW 62 242 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          45,
+          46
+        ],
+        "secondary_row": 38,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "380 ÷ 415 V"
+          ],
+          [
+            "reference_h",
+            "6"
+          ]
+        ],
+        "applications": "Standard use",
+        "primary_skus": [
+          "GW 60 020 FH",
+          "GW 60 020 H",
+          "GW 60 042 FH",
+          "GW 60 042 H",
+          "GW 60 020 FH",
+          "GW 60 020 WH",
+          "GW 60 042 FH",
+          "GW 60 042 WH"
+        ],
+        "secondary_skus": [
+          "GW 62 020 FH",
+          "GW 62 020 H",
+          "GW 62 042 FH",
+          "GW 62 042 H",
+          "GW 62 221 FH",
+          "GW 62 221 H",
+          "GW 62 243 FH",
+          "GW 62 243 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          47
+        ],
+        "secondary_row": 39,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "480 ÷ 500 V"
+          ],
+          [
+            "reference_h",
+            "7"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 718 H",
+          "GW 60 752 H"
+        ],
+        "secondary_skus": [
+          "GW 62 718 H",
+          "GW 62 752 H",
+          "GW 62 818 H",
+          "GW 62 852 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          48
+        ],
+        "secondary_row": 40,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "480 ÷ 500 V"
+          ],
+          [
+            "reference_h",
+            "7"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 021 H",
+          "GW 60 043 H"
+        ],
+        "secondary_skus": [
+          "GW 62 021 H",
+          "GW 62 043 H",
+          "GW 62 222 H",
+          "GW 62 244 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          49
+        ],
+        "secondary_row": 41,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "480 ÷ 500 V"
+          ],
+          [
+            "reference_h",
+            "7"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 022 H",
+          "GW 60 044 H"
+        ],
+        "secondary_skus": [
+          "GW 62 022 H",
+          "GW 62 044 H",
+          "GW 62 223 H",
+          "GW 62 245 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          50
+        ],
+        "secondary_row": 42,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "600 ÷ 690 V"
+          ],
+          [
+            "reference_h",
+            "5"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 719 H",
+          "GW 60 753 H"
+        ],
+        "secondary_skus": [
+          "GW 62 719 H",
+          "GW 62 753 H",
+          "GW 62 819 H",
+          "GW 62 853 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          51
+        ],
+        "secondary_row": 43,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "600 ÷ 690 V"
+          ],
+          [
+            "reference_h",
+            "5"
+          ]
+        ],
+        "applications": "Use with particular voltage",
+        "primary_skus": [
+          "GW 60 720 H",
+          "GW 60 754 H"
+        ],
+        "secondary_skus": [
+          "GW 62 720 H",
+          "GW 62 754 H",
+          "GW 62 820 H",
+          "GW 62 854 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          52
+        ],
+        "secondary_row": 44,
+        "shared_key": [
+          [
+            "frequency",
+            "100 ÷ 300 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "10"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 721 H",
+          "GW 60 755 H"
+        ],
+        "secondary_skus": [
+          "GW 62 721 H",
+          "GW 62 755 H",
+          "GW 62 821 H",
+          "GW 62 855 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          53
+        ],
+        "secondary_row": 45,
+        "shared_key": [
+          [
+            "frequency",
+            "100 ÷ 300 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "10"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 722 H",
+          "GW 60 756 H"
+        ],
+        "secondary_skus": [
+          "GW 62 722 H",
+          "GW 62 756 H",
+          "GW 62 822 H",
+          "GW 62 856 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          54
+        ],
+        "secondary_row": 46,
+        "shared_key": [
+          [
+            "frequency",
+            "100 ÷ 300 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "10"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 723 H",
+          "GW 60 757 H"
+        ],
+        "secondary_skus": [
+          "GW 62 723 H",
+          "GW 62 757 H",
+          "GW 62 823 H",
+          "GW 62 857 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          55
+        ],
+        "secondary_row": 47,
+        "shared_key": [
+          [
+            "frequency",
+            "> 300 ÷ 500 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "2"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 724 H",
+          "GW 60 758 H"
+        ],
+        "secondary_skus": [
+          "GW 62 724 H",
+          "GW 62 758 H",
+          "GW 62 824 H",
+          "GW 62 858 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          56
+        ],
+        "secondary_row": 48,
+        "shared_key": [
+          [
+            "frequency",
+            "> 300 ÷ 500 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "2"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 725 H",
+          "GW 60 759 H"
+        ],
+        "secondary_skus": [
+          "GW 62 725 H",
+          "GW 62 759 H",
+          "GW 62 825 H",
+          "GW 62 859 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          57
+        ],
+        "secondary_row": 49,
+        "shared_key": [
+          [
+            "frequency",
+            "> 300 ÷ 500 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 V"
+          ],
+          [
+            "reference_h",
+            "2"
+          ]
+        ],
+        "applications": "Use with high frequencies",
+        "primary_skus": [
+          "GW 60 726 H",
+          "GW 60 760 H"
+        ],
+        "secondary_skus": [
+          "GW 62 726 H",
+          "GW 62 760 H",
+          "GW 62 826 H",
+          "GW 62 860 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          58
+        ],
+        "secondary_row": 50,
+        "shared_key": [
+          [
+            "frequency",
+            "60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "440 ÷ 460 V"
+          ],
+          [
+            "reference_h",
+            "11"
+          ]
+        ],
+        "applications": "Marine, port and naval, installations",
+        "primary_skus": [
+          "GW 60 727 H",
+          "GW 60 761 H"
+        ],
+        "secondary_skus": [
+          "GW 62 727 H",
+          "GW 62 761 H",
+          "GW 62 827 H",
+          "GW 62 861 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          59
+        ],
+        "secondary_row": 51,
+        "shared_key": [
+          [
+            "frequency",
+            "60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "440 ÷ 460 V"
+          ],
+          [
+            "reference_h",
+            "11"
+          ]
+        ],
+        "applications": "Marine, port and naval, installations",
+        "primary_skus": [
+          "GW 60 728 H",
+          "GW 60 762 H"
+        ],
+        "secondary_skus": [
+          "GW 62 728 H",
+          "GW 62 762 H",
+          "GW 62 828 H",
+          "GW 62 862 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          60
+        ],
+        "secondary_row": 52,
+        "shared_key": [
+          [
+            "frequency",
+            "50 Hz / 60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "380 V / 440 V"
+          ],
+          [
+            "reference_h",
+            "3"
+          ]
+        ],
+        "applications": "Refrigeretion containers",
+        "primary_skus": [
+          "GW 60 729 H",
+          "GW 60 145 H"
+        ],
+        "secondary_skus": [
+          "GW 62 729 H",
+          "GW 62 128 H",
+          "GW 62 829 H",
+          "GW 62 283 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          61
+        ],
+        "secondary_row": 53,
+        "shared_key": [
+          [
+            "frequency",
+            "50 Hz / 60 Hz"
+          ],
+          [
+            "poles",
+            "3P+N+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "380 V / 440 V"
+          ],
+          [
+            "reference_h",
+            "3"
+          ]
+        ],
+        "applications": "Refrigeretion containers",
+        "primary_skus": [
+          "GW 60 730 H",
+          "GW 60 763 H"
+        ],
+        "secondary_skus": [
+          "GW 62 730 H",
+          "GW 62 763 H",
+          "GW 62 830 H",
+          "GW 62 863 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          62
+        ],
+        "secondary_row": 54,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "transf."
+          ],
+          [
+            "reference_h",
+            "12"
+          ]
+        ],
+        "applications": "Isolation transformers",
+        "primary_skus": [
+          "GW 60 731 H",
+          "GW 60 764 H"
+        ],
+        "secondary_skus": [
+          "GW 62 731 H",
+          "GW 62 764 H",
+          "GW 62 831 H",
+          "GW 62 864 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          63
+        ],
+        "secondary_row": 55,
+        "shared_key": [
+          [
+            "frequency",
+            "50/60 Hz"
+          ],
+          [
+            "poles",
+            "3P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "transf."
+          ],
+          [
+            "reference_h",
+            "12"
+          ]
+        ],
+        "applications": "Isolation transformers",
+        "primary_skus": [
+          "GW 60 732 H",
+          "GW 60 765 H"
+        ],
+        "secondary_skus": [
+          "GW 62 732 H",
+          "GW 62 765 H",
+          "GW 62 832 H",
+          "GW 62 865 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          64
+        ],
+        "secondary_row": 56,
+        "shared_key": [
+          [
+            "frequency",
+            "dc"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 50 ÷ 250V"
+          ],
+          [
+            "reference_h",
+            "3"
+          ]
+        ],
+        "applications": "Use in direct current",
+        "primary_skus": [
+          "GW 60 733 H",
+          "GW 60 766 H"
+        ],
+        "secondary_skus": [
+          "GW 62 733 H",
+          "GW 62 766 H",
+          "GW 62 833 H",
+          "GW 62 866 H"
+        ]
+      },
+      {
+        "primary_rows": [
+          65
+        ],
+        "secondary_row": 57,
+        "shared_key": [
+          [
+            "frequency",
+            "dc"
+          ],
+          [
+            "poles",
+            "2P+E"
+          ],
+          [
+            "rated_current",
+            "32 A"
+          ],
+          [
+            "rated_voltage",
+            "> 250V"
+          ],
+          [
+            "reference_h",
+            "8"
+          ]
+        ],
+        "applications": "Use in direct current",
+        "primary_skus": [
+          "GW 60 734 H",
+          "GW 60 767 H"
+        ],
+        "secondary_skus": [
+          "GW 62 734 H",
+          "GW 62 767 H",
+          "GW 62 834 H",
+          "GW 62 867 H"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+﻿product_code,rated_current,rated_voltage,frequency,poles,reference_h,product_type,continuation_product_type,ip_rating,wiring_type,applications,footnote_marker,footnote_text,phase_inverter,normalization_confidence
+GW 60 001 FH,16 A,100 ÷ 130 V,50/60 Hz,2P+E,4,Straight plugs,,IP44/IP54,Fast wiring,Standard use,,,,0.99
+GW 60 001 H,16 A,100 ÷ 130 V,50/60 Hz,2P+E,4,Straight plugs,,IP44/IP54,Screw wiring,Standard use,,,,0.98
+GW 60 023 FH,16 A,100 ÷ 130 V,50/60 Hz,2P+E,4,Straight plugs,,IP66/IP67/IP68/IP69,Fast wiring,Standard use,,,,0.98
+GW 60 023 H,16 A,100 ÷ 130 V,50/60 Hz,2P+E,4,Straight plugs,,IP66/IP67/IP68/IP69,Screw wiring,Standard use,,,,0.98
+GW 60 005 WH,16 A,200 ÷ 250 V,50/60 Hz,3P+E,9,Straight plugs,,IP44/IP54,Screw wiring,Standard use,(*),Straight plugs with phase inverter,Yes,0.94
+GW 62 001 FH,16 A,100 ÷ 130 V,50/60 Hz,2P+E,4,Straight plugs,Straight connectors,IP44/IP54,Fast wiring,Standard use,,,,0.98

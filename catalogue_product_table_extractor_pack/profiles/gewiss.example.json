@@ -1,0 +1,29 @@
+{
+  "sku_patterns": [
+    "\\bGW\\s*\\d{2}\\s*\\d{3}(?:\\s*(?:FH|WH|H))?\\b"
+  ],
+  "header_aliases": {
+    "Rated current (In)": "rated_current",
+    "Rated Voltage (Un)": "rated_voltage",
+    "Frequency": "frequency",
+    "Poles": "poles",
+    "Reference h": "reference_h",
+    "APPLICATIONS": "applications"
+  },
+  "option_codes": [
+    "E",
+    "STE",
+    "SEN",
+    "DD",
+    "AD"
+  ],
+  "footnote_rules": [
+    {
+      "pattern": "(?i)phase\\s+inverter",
+      "attribute": "phase_inverter",
+      "value": "Yes"
+    }
+  ],
+  "auto_accept_confidence": 0.9,
+  "flag_confidence": 0.7
+}

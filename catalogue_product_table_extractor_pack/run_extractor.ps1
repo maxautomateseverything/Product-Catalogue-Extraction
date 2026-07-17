@@ -48,6 +48,33 @@ function Select-Folder {
     throw "An output folder was not selected."
 }
 
+function Ensure-OutputFolder {
+    param([string]$Path)
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        throw "The output-folder path is empty."
+    }
+
+    try {
+        if (-not (Test-Path -LiteralPath $Path -PathType Container)) {
+            New-Item -ItemType Directory -Path $Path -Force | Out-Null
+        }
+
+        # Confirm that Windows can write into the selected folder before the
+        # extractor starts.
+        $testFile = Join-Path $Path ".catalogue_extractor_write_test.tmp"
+        Set-Content -LiteralPath $testFile -Value "write-test" -Encoding UTF8
+        Remove-Item -LiteralPath $testFile -Force
+    }
+    catch {
+        throw (
+            "The output folder could not be created or written to: '$Path'. " +
+            "Choose an existing local folder, or create the folder manually. " +
+            "Windows reported: " + $_.Exception.Message
+        )
+    }
+}
+
 function Read-Default {
     param([string]$Prompt, [string]$Default)
     $value = Read-Host "$Prompt [$Default]"
@@ -65,9 +92,17 @@ function Read-YesNo {
 
 function Get-PythonCommand {
     $py = Get-Command py -ErrorAction SilentlyContinue
-    if ($py) { return @("py") }
+    if ($py) {
+        if ($py.Source) { return $py.Source }
+        return $py.Name
+    }
+
     $python = Get-Command python -ErrorAction SilentlyContinue
-    if ($python) { return @("python") }
+    if ($python) {
+        if ($python.Source) { return $python.Source }
+        return $python.Name
+    }
+
     throw "Python was not found. Install Python 3.11 or 3.12 and select 'Add Python to PATH'."
 }
 
@@ -101,24 +136,30 @@ function Save-JsonConfig([hashtable]$Config, [string]$Path) {
 function Invoke-Extractor([string]$Python, [string]$Script, [string]$ConfigFile) {
     Write-Host ""
     Write-Host "Starting extractor..." -ForegroundColor Green
-    Write-Host "$Python `"$Script`" --config `"$ConfigFile`"" -ForegroundColor DarkGray
+    Write-Host "Python executable: $Python" -ForegroundColor DarkGray
+    Write-Host "`"$Python`" `"$Script`" --config `"$ConfigFile`"" -ForegroundColor DarkGray
+
     & $Python $Script --config $ConfigFile
+
     if ($LASTEXITCODE -ne 0) {
         throw "The extractor returned exit code $LASTEXITCODE."
     }
 }
 
 try {
-    Write-Heading "Catalogue Table Extractor - Guided Setup"
+    Write-Heading "Catalogue Table Extractor Version 9 - Guided Setup"
 
     $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
     $script = Join-Path $scriptDir "catalogue_table_extractor.py"
+    $dynamicModule = Join-Path $scriptDir "dynamic_table_model.py"
     if (-not (Test-Path -LiteralPath $script)) {
         throw "catalogue_table_extractor.py was not found beside this launcher."
     }
+    if (-not (Test-Path -LiteralPath $dynamicModule)) {
+        throw "dynamic_table_model.py was not found beside catalogue_table_extractor.py."
+    }
 
-    $pythonParts = Get-PythonCommand
-    $python = $pythonParts[0]
+    $python = Get-PythonCommand
 
     Write-Host "Choose a run mode:"
     Write-Host "  1. Small deterministic test"
@@ -129,10 +170,15 @@ try {
     Write-Host "  6. Resume/rebuild a previous full run"
     $mode = Read-Default "Run mode" "1"
 
+    Write-Host ""
+    Write-Host "Version 9 should use a new output folder for its first run." -ForegroundColor Yellow
+    Write-Host "Older checkpoints do not contain the new SKU-anchor graph and relationship model." -ForegroundColor Yellow
     $pdf = Select-File "Select the full catalogue PDF" "PDF files (*.pdf)|*.pdf"
     $skuRegistry = Select-File "Select the canonical SKU registry (Cancel if unavailable)" "CSV files (*.csv)|*.csv|All files (*.*)|*.*" $true
     $indexRows = Select-File "Select the SKU index rows file (Cancel if unavailable)" "CSV files (*.csv)|*.csv|All files (*.*)|*.*" $true
-    $output = Select-Folder "Select or create the output folder"
+    $tableProfile = Select-File "Select an optional reusable table profile (Cancel to use generic logic)" "JSON files (*.json)|*.json|All files (*.*)|*.*" $true
+    $output = Select-Folder "Select or create a NEW Version 9 output folder"
+    Ensure-OutputFolder $output
 
     $manufacturer = Read-Default "Manufacturer" ([IO.Path]::GetFileNameWithoutExtension($pdf))
     $catalogueId = Read-Default "Catalogue ID" "$manufacturer-catalogue"
@@ -152,6 +198,7 @@ try {
         output = $output
         sku_registry = $skuRegistry
         sku_index_rows = $indexRows
+        table_profile = $tableProfile
         catalogue_page_offset = "auto"
         index_page_radius = 1
         code_registry_scope = "all"
@@ -167,6 +214,8 @@ try {
         ollama_timeout = 1800
         ollama_keep_alive = "60m"
         ai_low_confidence_action = "keep-deterministic"
+        continuation_auto_threshold = 0.90
+        continuation_review_threshold = 0.70
         log_level = "INFO"
     }
 
@@ -183,6 +232,7 @@ try {
         }
     }
 
+    Ensure-OutputFolder $output
     $configFile = Join-Path $output "last_run_config.json"
     Save-JsonConfig $config $configFile
 
@@ -190,6 +240,7 @@ try {
     Write-Host "PDF:           $pdf"
     Write-Host "SKU registry:  $skuRegistry"
     Write-Host "Index rows:    $indexRows"
+    Write-Host "Table profile: $tableProfile"
     Write-Host "Pages:         $($config['pages'])"
     Write-Host "Output:        $output"
     Write-Host "Config:        $configFile"

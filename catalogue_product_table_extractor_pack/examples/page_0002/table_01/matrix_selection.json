@@ -1,0 +1,1650 @@
+{
+  "selected": "provided_layout",
+  "selected_score": 9.242,
+  "candidates": [
+    {
+      "name": "provided_layout",
+      "bbox": [
+        0.0,
+        89.5416259765625,
+        552.755029296875,
+        735.2740042550223
+      ],
+      "merged_expansions": [
+        {
+          "target_row": 1,
+          "target_column": 2,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 3,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 5,
+          "source_row": 1,
+          "source_column": 4,
+          "value": "Straight connectors\nIP66/IP67/IP68/IP69\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 7,
+          "source_row": 1,
+          "source_column": 6,
+          "value": "10° flush-mounting\nsocket-outlets IP44/IP45\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 9,
+          "source_row": 1,
+          "source_column": 8,
+          "value": "10° flush-mounting\nsocket-outlets IP66/IP67\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 3,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 4,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 5,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 6,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 7,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 8,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 9,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 10,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 12,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 13,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 14,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 15,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 17,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 18,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 19,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 20,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 21,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 23,
+          "target_column": 10,
+          "source_row": 22,
+          "source_column": 10,
+          "value": "Marine, port and naval,\ninstallations",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 25,
+          "target_column": 10,
+          "source_row": 24,
+          "source_column": 10,
+          "value": "Refrigeretion containers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 27,
+          "target_column": 10,
+          "source_row": 26,
+          "source_column": 10,
+          "value": "Isolation\ntransformers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 29,
+          "target_column": 10,
+          "source_row": 28,
+          "source_column": 10,
+          "value": "Use in\ndirect current",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 31,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 32,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 33,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 34,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 35,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 36,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 37,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 38,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 40,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 41,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 42,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 43,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 45,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 46,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 47,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 48,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 49,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 51,
+          "target_column": 10,
+          "source_row": 50,
+          "source_column": 10,
+          "value": "Marine, port and naval,\ninstallations",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 53,
+          "target_column": 10,
+          "source_row": 52,
+          "source_column": 10,
+          "value": "Refrigeretion containers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 55,
+          "target_column": 10,
+          "source_row": 54,
+          "source_column": 10,
+          "value": "Isolation\ntransformers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 57,
+          "target_column": 10,
+          "source_row": 56,
+          "source_column": 10,
+          "value": "Use in\ndirect current",
+          "relationship": "covered_by_merged_cell"
+        }
+      ],
+      "header_rows": 1,
+      "total_codes": 296,
+      "exact_codes": 296,
+      "unique_codes": 296,
+      "sku_cells": 296,
+      "multi_code_cells": 0,
+      "header_code_count": 0,
+      "singleton_sku_cell_ratio": 1.0,
+      "bbox_overlap": 1.0,
+      "shape": [
+        57,
+        10
+      ],
+      "score": 9.242
+    },
+    {
+      "name": "pymupdf_lines_1",
+      "bbox": [
+        0.0,
+        89.5416259765625,
+        552.755029296875,
+        735.2740042550223
+      ],
+      "merged_expansions": [
+        {
+          "target_row": 1,
+          "target_column": 2,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 3,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 5,
+          "source_row": 1,
+          "source_column": 4,
+          "value": "Straight connectors\nIP66/IP67/IP68/IP69\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 7,
+          "source_row": 1,
+          "source_column": 6,
+          "value": "10° flush-mounting\nsocket-outlets IP44/IP45\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 9,
+          "source_row": 1,
+          "source_column": 8,
+          "value": "10° flush-mounting\nsocket-outlets IP66/IP67\nFast wiring Screw wiring",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 3,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 4,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 5,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 6,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 7,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 8,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 9,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 10,
+          "target_column": 10,
+          "source_row": 2,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 12,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 13,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 14,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 15,
+          "target_column": 10,
+          "source_row": 11,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 17,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 18,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 19,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 20,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 21,
+          "target_column": 10,
+          "source_row": 16,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 23,
+          "target_column": 10,
+          "source_row": 22,
+          "source_column": 10,
+          "value": "Marine, port and naval,\ninstallations",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 25,
+          "target_column": 10,
+          "source_row": 24,
+          "source_column": 10,
+          "value": "Refrigeretion containers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 27,
+          "target_column": 10,
+          "source_row": 26,
+          "source_column": 10,
+          "value": "Isolation\ntransformers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 29,
+          "target_column": 10,
+          "source_row": 28,
+          "source_column": 10,
+          "value": "Use in\ndirect current",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 31,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 32,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 33,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 34,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 35,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 36,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 37,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 38,
+          "target_column": 10,
+          "source_row": 30,
+          "source_column": 10,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 40,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 41,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 42,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 43,
+          "target_column": 10,
+          "source_row": 39,
+          "source_column": 10,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 45,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 46,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 47,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 48,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 49,
+          "target_column": 10,
+          "source_row": 44,
+          "source_column": 10,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 51,
+          "target_column": 10,
+          "source_row": 50,
+          "source_column": 10,
+          "value": "Marine, port and naval,\ninstallations",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 53,
+          "target_column": 10,
+          "source_row": 52,
+          "source_column": 10,
+          "value": "Refrigeretion containers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 55,
+          "target_column": 10,
+          "source_row": 54,
+          "source_column": 10,
+          "value": "Isolation\ntransformers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 57,
+          "target_column": 10,
+          "source_row": 56,
+          "source_column": 10,
+          "value": "Use in\ndirect current",
+          "relationship": "covered_by_merged_cell"
+        }
+      ],
+      "header_rows": 1,
+      "total_codes": 296,
+      "exact_codes": 296,
+      "unique_codes": 296,
+      "sku_cells": 296,
+      "multi_code_cells": 0,
+      "header_code_count": 0,
+      "singleton_sku_cell_ratio": 1.0,
+      "bbox_overlap": 1.0,
+      "shape": [
+        57,
+        10
+      ],
+      "score": 9.242
+    },
+    {
+      "name": "pymupdf_lines_strict_1",
+      "bbox": [
+        0.0,
+        89.5416259765625,
+        552.75537109375,
+        735.27392578125
+      ],
+      "merged_expansions": [
+        {
+          "target_row": 1,
+          "target_column": 2,
+          "source_row": 26,
+          "source_column": 2,
+          "value": "GW 62 714 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 4,
+          "source_row": 26,
+          "source_column": 4,
+          "value": "GW 62 748 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 6,
+          "source_row": 26,
+          "source_column": 6,
+          "value": "GW 62 814 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 1,
+          "target_column": 8,
+          "source_row": 26,
+          "source_column": 8,
+          "value": "GW 62 848 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 2,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 3,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 3,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 4,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 4,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 5,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 5,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 6,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 6,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 7,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 7,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 8,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 8,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 9,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 9,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 10,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 10,
+          "target_column": 9,
+          "source_row": 2,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 11,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 12,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 12,
+          "target_column": 9,
+          "source_row": 11,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 13,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 13,
+          "target_column": 9,
+          "source_row": 11,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 14,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 14,
+          "target_column": 9,
+          "source_row": 11,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 15,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 15,
+          "target_column": 9,
+          "source_row": 11,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 16,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 17,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 17,
+          "target_column": 9,
+          "source_row": 16,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 18,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 18,
+          "target_column": 9,
+          "source_row": 16,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 19,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 19,
+          "target_column": 9,
+          "source_row": 16,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 20,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 20,
+          "target_column": 9,
+          "source_row": 16,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 21,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 21,
+          "target_column": 9,
+          "source_row": 16,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 22,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 23,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 23,
+          "target_column": 9,
+          "source_row": 22,
+          "source_column": 9,
+          "value": "Marine, port and naval,\ninstallations",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 24,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 25,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 25,
+          "target_column": 9,
+          "source_row": 24,
+          "source_column": 9,
+          "value": "Refrigeretion containers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 26,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 27,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 27,
+          "target_column": 9,
+          "source_row": 26,
+          "source_column": 9,
+          "value": "Isolation\ntransformers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 28,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 29,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 29,
+          "target_column": 9,
+          "source_row": 28,
+          "source_column": 9,
+          "value": "Use in\ndirect current",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 30,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 31,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 31,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 32,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 32,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 33,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 33,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 34,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 34,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 35,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 35,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 36,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 36,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 37,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 37,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 38,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 38,
+          "target_column": 9,
+          "source_row": 30,
+          "source_column": 9,
+          "value": "Standard\nuse",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 39,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 40,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 40,
+          "target_column": 9,
+          "source_row": 39,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 41,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 41,
+          "target_column": 9,
+          "source_row": 39,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 42,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 42,
+          "target_column": 9,
+          "source_row": 39,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 43,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 43,
+          "target_column": 9,
+          "source_row": 39,
+          "source_column": 9,
+          "value": "Use with particular\nvoltage",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 44,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 45,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 45,
+          "target_column": 9,
+          "source_row": 44,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 46,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 46,
+          "target_column": 9,
+          "source_row": 44,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 47,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 47,
+          "target_column": 9,
+          "source_row": 44,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 48,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 48,
+          "target_column": 9,
+          "source_row": 44,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 49,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 49,
+          "target_column": 9,
+          "source_row": 44,
+          "source_column": 9,
+          "value": "Use with\nhigh frequencies",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 50,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 51,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 51,
+          "target_column": 9,
+          "source_row": 50,
+          "source_column": 9,
+          "value": "Marine, port and naval,\ninstallations",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 52,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 53,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 53,
+          "target_column": 9,
+          "source_row": 52,
+          "source_column": 9,
+          "value": "Refrigeretion containers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 54,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 55,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 55,
+          "target_column": 9,
+          "source_row": 54,
+          "source_column": 9,
+          "value": "Isolation\ntransformers",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 56,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 57,
+          "target_column": 1,
+          "source_row": 1,
+          "source_column": 1,
+          "value": "Straight connectors\nIP44/IP54\nFast wiring Screw wiring\nGW 62 001 FH GW 62 001 H\nGW 62 002 FH GW 62 002 H\nGW 62 003 FH GW 62 003 H\nGW 62 004 FH GW 62 004 H\nGW 62 005 FH GW 62 005 H\nGW 62 006 FH GW 62 006 H\nGW 62 007 FH GW 62 007 H\nGW 62 008 FH GW 62 008 H\nGW 62 009 FH GW 62 009 H\nGW 62 701 H\nGW 62 010 H\nGW 62 011 H\nGW 62 702 H\nGW 62 703 H\nGW 62 704 H\nGW 62 705 H\nGW 62 706 H\nGW 62 707 H\nGW 62 708 H\nGW 62 709 H\nGW 62 710 H\nGW 62 711 H\nGW 62 712 H\nGW 62 713 H\nGW 62 714 H\nGW 62 715 H\nGW 62 716 H\nGW 62 717 H\nGW 62 012 FH GW 62 012 H\nGW 62 013 FH GW 62 013 H\nGW 62 014 FH GW 62 014 H\nGW 62 015 FH GW 62 015 H\nGW 62 016 FH GW 62 016 H\nGW 62 017 FH GW 62 017 H\nGW 62 018 FH GW 62 018 H\nGW 62 019 FH GW 62 019 H\nGW 62 020 FH GW 62 020 H\nGW 62 718 H\nGW 62 021 H\nGW 62 022 H\nGW 62 719 H\nGW 62 720 H\nGW 62 721 H\nGW 62 722 H\nGW 62 723 H\nGW 62 724 H\nGW 62 725 H\nGW 62 726 H\nGW 62 727 H\nGW 62 728 H\nGW 62 729 H\nGW 62 730 H\nGW 62 731 H\nGW 62 732 H\nGW 62 733 H\nGW 62 734 H",
+          "relationship": "covered_by_merged_cell"
+        },
+        {
+          "target_row": 57,
+          "target_column": 9,
+          "source_row": 56,
+          "source_column": 9,
+          "value": "Use in\ndirect current",
+          "relationship": "covered_by_merged_cell"
+        }
+      ],
+      "header_rows": 0,
+      "total_codes": 4500,
+      "exact_codes": 4500,
+      "unique_codes": 296,
+      "sku_cells": 339,
+      "multi_code_cells": 57,
+      "header_code_count": 0,
+      "singleton_sku_cell_ratio": 0.8319,
+      "bbox_overlap": 1.0,
+      "shape": [
+        57,
+        9
+      ],
+      "score": -62.300213
+    }
+  ],
+  "reason": "Highest SKU-preservation and structural score."
+}

@@ -1,0 +1,23 @@
+{
+  "header_aliases": {
+    "PRODUCT": "product_code",
+    "DIMENSIONS (mm)": "product_code",
+    "Length": "length",
+    "Height/Depth": "height_depth",
+    "Width": "width",
+    "Total Power": "total_power",
+    "CCT": "cct",
+    "Lumens": "lumens"
+  },
+  "option_codes": [
+    "E",
+    "STE",
+    "SEN",
+    "DD",
+    "AD",
+    "STD",
+    "NEW"
+  ],
+  "auto_accept_confidence": 0.9,
+  "flag_confidence": 0.7
+}

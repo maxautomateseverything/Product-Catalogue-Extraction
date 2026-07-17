@@ -1,0 +1,19 @@
+{
+  "header_aliases": {
+    "Rated current (In)": "rated_current",
+    "Rated Voltage (Un)": "rated_voltage",
+    "Reference h": "reference_h",
+    "APPLICATIONS": "applications",
+    "Height/Depth": "height_depth"
+  },
+  "option_codes": [
+    "E",
+    "STE",
+    "SEN",
+    "DD",
+    "AD"
+  ],
+  "footnote_rules": [],
+  "auto_accept_confidence": 0.9,
+  "flag_confidence": 0.7
+}

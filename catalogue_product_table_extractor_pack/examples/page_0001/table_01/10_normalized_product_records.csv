@@ -1,0 +1,181 @@
+﻿product_code,normalization_status,normalization_confidence,source_page,source_table,source_rows,source_columns,applications,footnote_marker,footnote_text,frequency,ip_rating,phase_inverter,poles,product_type,rated_current,rated_voltage,reference_h,source_column_path,wiring_type
+GW 60 001 FH,accepted,0.99,1,1,2,6,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 001 H,accepted,0.98,1,1,2,7,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 023 FH,accepted,0.98,1,1,2,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 023 H,accepted,0.98,1,1,2,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 002 FH,accepted,0.98,1,1,3,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 002 H,accepted,0.97,1,1,3,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 024 FH,accepted,0.97,1,1,3,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 024 H,accepted,0.97,1,1,3,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 003 FH,accepted,0.98,1,1,4,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 003 H,accepted,0.97,1,1,4,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 025 FH,accepted,0.97,1,1,4,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 025 H,accepted,0.97,1,1,4,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 004 FH,accepted,0.98,1,1,5,6,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,200 ÷ 250 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 004 H,accepted,0.97,1,1,5,7,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,200 ÷ 250 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 026 FH,accepted,0.97,1,1,5,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,200 ÷ 250 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 026 H,accepted,0.97,1,1,5,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,200 ÷ 250 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 005 FH,accepted,0.98,1,1,6,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 005 H,accepted,0.97,1,1,6,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 027 FH,accepted,0.97,1,1,6,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 027 H,accepted,0.97,1,1,6,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 005 FH,accepted,0.98,1,1,7,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 005 WH,accepted,0.94,1,1,7,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 027 FH,accepted,0.97,1,1,7,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 027 WH,accepted,0.94,1,1,7,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 006 FH,accepted,0.98,1,1,8,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 006 H,accepted,0.97,1,1,8,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 028 FH,accepted,0.97,1,1,8,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 028 H,accepted,0.97,1,1,8,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 006 FH,accepted,0.98,1,1,9,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 006 WH,accepted,0.94,1,1,9,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 028 FH,accepted,0.97,1,1,9,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 028 WH,accepted,0.94,1,1,9,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+N+E,Straight plugs,16 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 007 FH,accepted,0.98,1,1,10,6,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,380 ÷ 415 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 007 H,accepted,0.97,1,1,10,7,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,380 ÷ 415 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 029 FH,accepted,0.97,1,1,10,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,380 ÷ 415 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 029 H,accepted,0.97,1,1,10,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,380 ÷ 415 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 008 FH,accepted,0.98,1,1,11,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 008 H,accepted,0.97,1,1,11,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 030 FH,accepted,0.97,1,1,11,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 030 H,accepted,0.97,1,1,11,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 008 FH,accepted,0.98,1,1,12,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 008 WH,accepted,0.94,1,1,12,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 030 FH,accepted,0.97,1,1,12,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 030 WH,accepted,0.94,1,1,12,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 009 FH,accepted,0.98,1,1,13,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 009 H,accepted,0.97,1,1,13,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 031 FH,accepted,0.97,1,1,13,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 031 H,accepted,0.97,1,1,13,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 009 FH,accepted,0.98,1,1,14,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 009 WH,accepted,0.94,1,1,14,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 031 FH,accepted,0.97,1,1,14,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 031 WH,accepted,0.94,1,1,14,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+N+E,Straight plugs,16 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 701 H,accepted,0.97,1,1,15,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,480 ÷ 500 V,7,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 735 H,accepted,0.97,1,1,15,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,480 ÷ 500 V,7,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 010 H,accepted,0.97,1,1,16,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,480 ÷ 500 V,7,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 032 H,accepted,0.97,1,1,16,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,480 ÷ 500 V,7,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 011 H,accepted,0.97,1,1,17,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,480 ÷ 500 V,7,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 033 H,accepted,0.97,1,1,17,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,480 ÷ 500 V,7,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 702 H,accepted,0.97,1,1,18,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,600 ÷ 690 V,5,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 736 H,accepted,0.97,1,1,18,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,600 ÷ 690 V,5,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 703 H,accepted,0.97,1,1,19,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,600 ÷ 690 V,5,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 737 H,accepted,0.97,1,1,19,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,600 ÷ 690 V,5,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 704 H,accepted,0.97,1,1,20,7,Use with high frequencies,,,100 ÷ 300 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,> 50 V,10,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 738 H,accepted,0.97,1,1,20,9,Use with high frequencies,,,100 ÷ 300 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,> 50 V,10,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 705 H,accepted,0.97,1,1,21,7,Use with high frequencies,,,100 ÷ 300 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,> 50 V,10,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 739 H,accepted,0.97,1,1,21,9,Use with high frequencies,,,100 ÷ 300 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,> 50 V,10,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 706 H,accepted,0.97,1,1,22,7,Use with high frequencies,,,100 ÷ 300 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,> 50 V,10,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 740 H,accepted,0.97,1,1,22,9,Use with high frequencies,,,100 ÷ 300 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,> 50 V,10,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 707 H,accepted,0.97,1,1,23,7,Use with high frequencies,,,> 300 ÷ 500 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,> 50 V,2,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 741 H,accepted,0.97,1,1,23,9,Use with high frequencies,,,> 300 ÷ 500 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,> 50 V,2,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 708 H,accepted,0.97,1,1,24,7,Use with high frequencies,,,> 300 ÷ 500 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,> 50 V,2,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 742 H,accepted,0.97,1,1,24,9,Use with high frequencies,,,> 300 ÷ 500 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,> 50 V,2,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 709 H,accepted,0.97,1,1,25,7,Use with high frequencies,,,> 300 ÷ 500 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,> 50 V,2,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 743 H,accepted,0.97,1,1,25,9,Use with high frequencies,,,> 300 ÷ 500 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,> 50 V,2,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 710 H,accepted,0.97,1,1,26,7,"Marine, port and naval, installations",,,60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,440 ÷ 460 V,11,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 744 H,accepted,0.97,1,1,26,9,"Marine, port and naval, installations",,,60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,440 ÷ 460 V,11,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 711 H,accepted,0.97,1,1,27,7,"Marine, port and naval, installations",,,60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,440 ÷ 460 V,11,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 745 H,accepted,0.97,1,1,27,9,"Marine, port and naval, installations",,,60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,440 ÷ 460 V,11,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 712 H,accepted,0.97,1,1,28,7,Refrigeretion containers,,,50 Hz / 60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,380 V / 440 V,3,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 746 H,accepted,0.97,1,1,28,9,Refrigeretion containers,,,50 Hz / 60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,380 V / 440 V,3,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 713 H,accepted,0.97,1,1,29,7,Refrigeretion containers,,,50 Hz / 60 Hz,IP44/IP54,,3P+N+E,Straight plugs,16 A,380 V / 440 V,3,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 747 H,accepted,0.97,1,1,29,9,Refrigeretion containers,,,50 Hz / 60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,16 A,380 V / 440 V,3,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 714 H,accepted,0.97,1,1,30,7,Isolation transformers,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,16 A,transf.,12,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 748 H,accepted,0.97,1,1,30,9,Isolation transformers,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,transf.,12,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 715 H,accepted,0.97,1,1,31,7,Isolation transformers,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,16 A,transf.,12,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 749 H,accepted,0.97,1,1,31,9,Isolation transformers,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,16 A,transf.,12,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 716 H,accepted,0.97,1,1,32,7,Use in direct current,,,dc,IP44/IP54,,2P+E,Straight plugs,16 A,> 50 ÷ 250V,3,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 750 H,accepted,0.97,1,1,32,9,Use in direct current,,,dc,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,> 50 ÷ 250V,3,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 717 H,accepted,0.97,1,1,33,7,Use in direct current,,,dc,IP44/IP54,,2P+E,Straight plugs,16 A,> 250V,8,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 751 H,accepted,0.97,1,1,33,9,Use in direct current,,,dc,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,16 A,> 250V,8,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 012 FH,accepted,0.99,1,1,34,6,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 012 H,accepted,0.98,1,1,34,7,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 034 FH,accepted,0.98,1,1,34,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 034 H,accepted,0.98,1,1,34,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 013 FH,accepted,0.98,1,1,35,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 013 H,accepted,0.97,1,1,35,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 035 FH,accepted,0.97,1,1,35,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 035 H,accepted,0.97,1,1,35,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 014 FH,accepted,0.98,1,1,36,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 014 H,accepted,0.97,1,1,36,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 036 FH,accepted,0.97,1,1,36,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 036 H,accepted,0.97,1,1,36,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,100 ÷ 130 V,4,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 015 FH,accepted,0.98,1,1,37,6,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,200 ÷ 250 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 015 H,accepted,0.97,1,1,37,7,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,200 ÷ 250 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 037 FH,accepted,0.97,1,1,37,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,200 ÷ 250 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 037 H,accepted,0.97,1,1,37,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,200 ÷ 250 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 016 FH,accepted,0.98,1,1,38,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 016 H,accepted,0.97,1,1,38,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 038 FH,accepted,0.97,1,1,38,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 038 H,accepted,0.97,1,1,38,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 016 FH,accepted,0.98,1,1,39,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 016 WH,accepted,0.94,1,1,39,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 038 FH,accepted,0.97,1,1,39,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 038 WH,accepted,0.94,1,1,39,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 017 FH,accepted,0.98,1,1,40,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 017 H,accepted,0.97,1,1,40,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 039 FH,accepted,0.97,1,1,40,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 039 H,accepted,0.97,1,1,40,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 017 FH,accepted,0.98,1,1,41,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 017 WH,accepted,0.94,1,1,41,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 039 FH,accepted,0.97,1,1,41,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 039 WH,accepted,0.94,1,1,41,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+N+E,Straight plugs,32 A,200 ÷ 250 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 018 FH,accepted,0.98,1,1,42,6,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,380 ÷ 415 V,9,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 018 H,accepted,0.97,1,1,42,7,Standard use,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,380 ÷ 415 V,9,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 040 FH,accepted,0.97,1,1,42,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,380 ÷ 415 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 040 H,accepted,0.97,1,1,42,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,380 ÷ 415 V,9,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 019 FH,accepted,0.98,1,1,43,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 019 H,accepted,0.97,1,1,43,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 041 FH,accepted,0.97,1,1,43,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 041 H,accepted,0.97,1,1,43,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 019 FH,accepted,0.98,1,1,44,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 019 WH,accepted,0.94,1,1,44,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 041 FH,accepted,0.97,1,1,44,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 041 WH,accepted,0.94,1,1,44,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 020 FH,accepted,0.98,1,1,45,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 020 H,accepted,0.97,1,1,45,7,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 042 FH,accepted,0.97,1,1,45,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 042 H,accepted,0.97,1,1,45,9,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 020 FH,accepted,0.98,1,1,46,6,Standard use,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Fast wiring,Fast wiring
+GW 60 020 WH,accepted,0.94,1,1,46,7,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP44/IP54,Yes,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 042 FH,accepted,0.97,1,1,46,8,Standard use,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Fast wiring,Fast wiring
+GW 60 042 WH,accepted,0.94,1,1,46,9,Standard use,(*),Straight plugs with phase inverter,50/60 Hz,IP66/IP67/IP68/IP69,Yes,3P+N+E,Straight plugs,32 A,380 ÷ 415 V,6,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 718 H,accepted,0.97,1,1,47,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,480 ÷ 500 V,7,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 752 H,accepted,0.97,1,1,47,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,480 ÷ 500 V,7,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 021 H,accepted,0.97,1,1,48,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,480 ÷ 500 V,7,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 043 H,accepted,0.97,1,1,48,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,480 ÷ 500 V,7,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 022 H,accepted,0.97,1,1,49,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,480 ÷ 500 V,7,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 044 H,accepted,0.97,1,1,49,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,480 ÷ 500 V,7,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 719 H,accepted,0.97,1,1,50,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,600 ÷ 690 V,5,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 753 H,accepted,0.97,1,1,50,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,600 ÷ 690 V,5,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 720 H,accepted,0.97,1,1,51,7,Use with particular voltage,,,50/60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,600 ÷ 690 V,5,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 754 H,accepted,0.97,1,1,51,9,Use with particular voltage,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,600 ÷ 690 V,5,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 721 H,accepted,0.97,1,1,52,7,Use with high frequencies,,,100 ÷ 300 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,> 50 V,10,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 755 H,accepted,0.97,1,1,52,9,Use with high frequencies,,,100 ÷ 300 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,> 50 V,10,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 722 H,accepted,0.97,1,1,53,7,Use with high frequencies,,,100 ÷ 300 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,> 50 V,10,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 756 H,accepted,0.97,1,1,53,9,Use with high frequencies,,,100 ÷ 300 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,> 50 V,10,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 723 H,accepted,0.97,1,1,54,7,Use with high frequencies,,,100 ÷ 300 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,> 50 V,10,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 757 H,accepted,0.97,1,1,54,9,Use with high frequencies,,,100 ÷ 300 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,> 50 V,10,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 724 H,accepted,0.97,1,1,55,7,Use with high frequencies,,,> 300 ÷ 500 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,> 50 V,2,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 758 H,accepted,0.97,1,1,55,9,Use with high frequencies,,,> 300 ÷ 500 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,> 50 V,2,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 725 H,accepted,0.97,1,1,56,7,Use with high frequencies,,,> 300 ÷ 500 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,> 50 V,2,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 759 H,accepted,0.97,1,1,56,9,Use with high frequencies,,,> 300 ÷ 500 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,> 50 V,2,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 726 H,accepted,0.97,1,1,57,7,Use with high frequencies,,,> 300 ÷ 500 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,> 50 V,2,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 760 H,accepted,0.97,1,1,57,9,Use with high frequencies,,,> 300 ÷ 500 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,> 50 V,2,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 727 H,accepted,0.97,1,1,58,7,"Marine, port and naval, installations",,,60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,440 ÷ 460 V,11,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 761 H,accepted,0.97,1,1,58,9,"Marine, port and naval, installations",,,60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,440 ÷ 460 V,11,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 728 H,accepted,0.97,1,1,59,7,"Marine, port and naval, installations",,,60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,440 ÷ 460 V,11,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 762 H,accepted,0.97,1,1,59,9,"Marine, port and naval, installations",,,60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,440 ÷ 460 V,11,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 729 H,accepted,0.97,1,1,60,7,Refrigeretion containers,,,50 Hz / 60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,380 V / 440 V,3,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 145 H,accepted,0.97,1,1,60,9,Refrigeretion containers,,,50 Hz / 60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,380 V / 440 V,3,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 730 H,accepted,0.97,1,1,61,7,Refrigeretion containers,,,50 Hz / 60 Hz,IP44/IP54,,3P+N+E,Straight plugs,32 A,380 V / 440 V,3,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 763 H,accepted,0.97,1,1,61,9,Refrigeretion containers,,,50 Hz / 60 Hz,IP66/IP67/IP68/IP69,,3P+N+E,Straight plugs,32 A,380 V / 440 V,3,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 731 H,accepted,0.97,1,1,62,7,Isolation transformers,,,50/60 Hz,IP44/IP54,,2P+E,Straight plugs,32 A,transf.,12,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 764 H,accepted,0.97,1,1,62,9,Isolation transformers,,,50/60 Hz,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,transf.,12,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 732 H,accepted,0.97,1,1,63,7,Isolation transformers,,,50/60 Hz,IP44/IP54,,3P+E,Straight plugs,32 A,transf.,12,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 765 H,accepted,0.97,1,1,63,9,Isolation transformers,,,50/60 Hz,IP66/IP67/IP68/IP69,,3P+E,Straight plugs,32 A,transf.,12,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 733 H,accepted,0.97,1,1,64,7,Use in direct current,,,dc,IP44/IP54,,2P+E,Straight plugs,32 A,> 50 ÷ 250V,3,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 766 H,accepted,0.97,1,1,64,9,Use in direct current,,,dc,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,> 50 ÷ 250V,3,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring
+GW 60 734 H,accepted,0.97,1,1,65,7,Use in direct current,,,dc,IP44/IP54,,2P+E,Straight plugs,32 A,> 250V,8,Straight plugs | IP44/IP54 | Screw wiring,Screw wiring
+GW 60 767 H,accepted,0.97,1,1,65,9,Use in direct current,,,dc,IP66/IP67/IP68/IP69,,2P+E,Straight plugs,32 A,> 250V,8,Straight plugs | IP66/IP67/IP68/IP69 | Screw wiring,Screw wiring

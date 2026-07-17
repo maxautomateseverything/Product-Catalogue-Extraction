@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Extract product-catalogue tables from selected PDF pages.
+"""Catalogue Table Extractor Version 9.
+
+Extract product-catalogue tables from selected PDF pages.
 
 Primary extractor
 -----------------
@@ -14,12 +16,14 @@ column covering that illustration. This script removes only sparse *edge*
 columns, recalculates the crop from the retained cell geometry, and writes both
 raw and refined diagnostics.
 
-Schema-flexible product extraction
+SKU-anchored relationship extraction
 ----------------------------------
-The extractor does not require one global catalogue schema. It can discover or
-load a product-code registry, find codes whether they appear in row headers,
-right-hand indexes, internal matrix cells, or column headers, and emit both
-table-specific wide CSVs and a universal long attribute CSV.
+The extractor does not require one global catalogue schema. Every exact registry
+match becomes an SKU anchor. The relationship engine searches the anchor's
+header path and all non-SKU attribute columns on the same visual row, crossing
+other registry-backed SKU columns when required. It also compares line-grid
+candidates and chooses the matrix that preserves SKU cells rather than merging
+large code blocks into headers.
 
 Optional routed local-LLM stage
 -------------------------------
@@ -100,6 +104,7 @@ import datetime as _dt
 import gc
 import os
 import subprocess
+import shutil
 import json
 import logging
 import re
@@ -107,6 +112,8 @@ import sys
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
+
+import dynamic_table_model as dtm
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
@@ -121,6 +128,7 @@ except ImportError as exc:  # pragma: no cover - friendly CLI failure
         f"Original error: {exc}"
     ) from exc
 
+VERSION = "9.0"
 LOGGER = logging.getLogger("catalogue-table-extractor")
 
 LAYOUT_WORKER_CODE = r"""
@@ -2938,6 +2946,10 @@ def build_catalogue_product_outputs(
         "source_attribute",
         "normalized_attribute",
         "attribute_value",
+        "attribute_value_raw",
+        "attribute_value_normalized",
+        "unit",
+        "datatype",
         "pdf_page",
         "table",
         "source_row",
@@ -3023,7 +3035,11 @@ def build_catalogue_product_outputs(
             normalized_attribute = clean_cell(
                 observation.get("normalized_attribute", "")
             ) or normalize_attribute_name(source_attribute)
-            value = clean_cell(observation.get("value", ""))
+            value = clean_cell(observation.get("value", observation.get("value_raw", "")))
+            value_raw = clean_cell(observation.get("value_raw", value)) or value
+            value_normalized = clean_cell(observation.get("value_normalized", value)) or value
+            unit = clean_cell(observation.get("unit", ""))
+            datatype = clean_cell(observation.get("datatype", "text"))
             if not value:
                 continue
             location = (
@@ -3041,6 +3057,10 @@ def build_catalogue_product_outputs(
                 source_attribute,
                 normalized_attribute,
                 value,
+                value_raw,
+                value_normalized,
+                unit,
+                datatype,
                 record.get("source_page", ""),
                 record.get("source_table", ""),
                 observation.get("source_row", ""),
@@ -3335,6 +3355,7 @@ def extract_catalogue(args: argparse.Namespace) -> int:
     output_root.mkdir(parents=True, exist_ok=True)
 
     target_columns = load_target_schema(args.schema)
+    table_profile = dtm.load_profile(args.table_profile)
     overrides = load_overrides(args.overrides)
     external_code_registry = load_external_product_codes(
         args.product_code_index,
@@ -3542,6 +3563,12 @@ def extract_catalogue(args: argparse.Namespace) -> int:
             "sku_index_rows": str(args.sku_index_rows.resolve()) if args.sku_index_rows else None,
             "catalogue_id": args.catalogue_id,
             "manufacturer": args.manufacturer,
+            "table_profile": str(args.table_profile.resolve()) if args.table_profile else None,
+            "dynamic_table_model": True,
+            "continuation_joins_enabled": not args.no_continuation_joins,
+            "continuation_auto_threshold": args.continuation_auto_threshold,
+            "continuation_review_threshold": args.continuation_review_threshold,
+            "normalization_priority": "attribute_precision",
             "catalogue_page_offset": page_offset,
             "index_page_radius": args.index_page_radius,
             "review_queue_input": (
@@ -3858,6 +3885,7 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                     write_csv(table_dir / "raw_matrix.csv", deterministic.raw_rows)
                     write_csv(table_dir / "refined_matrix.csv", deterministic.refined_rows)
                     write_json(table_dir / "pymupdf4llm_table.json", table)
+                    write_json(table_dir / "03_raw_pymupdf4llm.json", table)
 
                     normalized_rows, expansion_events = (
                         expand_merged_values(deterministic)
@@ -3876,16 +3904,24 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                         table_dir / "deterministic_structured.csv",
                         [deterministic_columns, *deterministic_rows],
                     )
-                    deterministic_product_records = dynamic_product_records(
-                        deterministic_columns,
-                        deterministic_rows,
-                        registry=product_code_registry,
-                        product_code_pattern=product_code_pattern,
+                    # Dynamic cell-graph interpretation.  This keeps the faithful
+                    # table reconstruction separate from one-record-per-SKU
+                    # normalization and does not require a catalogue-wide schema.
+                    dynamic_analysis = dtm.analyse_table(
+                        page=page,
                         page_number=page_number,
                         table_number=table_number,
-                        method=f"{deterministic.source}_dynamic_records",
+                        bbox=deterministic.refined_bbox,
+                        rows=normalized_rows,
+                        cells=deterministic.refined_cells,
+                        registry=product_code_registry,
+                        profile=table_profile,
                     )
-                    deterministic_product_columns, deterministic_product_rows = product_records_wide(
+                    dtm.write_analysis_artifacts(table_dir, dynamic_analysis)
+                    dynamic_columns = dynamic_analysis.reconstructed_columns
+                    dynamic_rows = dynamic_analysis.reconstructed_rows
+                    deterministic_product_records = dynamic_analysis.product_records
+                    deterministic_product_columns, deterministic_product_rows = dtm.product_records_to_wide(
                         deterministic_product_records
                     )
                     write_json(
@@ -3896,6 +3932,8 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                         table_dir / "deterministic_product_records.csv",
                         [deterministic_product_columns, *deterministic_product_rows],
                     )
+                    format_meta["dynamic_table_classification"] = dynamic_analysis.classification
+                    format_meta["dynamic_validation"] = dynamic_analysis.validation
 
                     write_json(
                         table_dir / "geometry.json",
@@ -3913,29 +3951,37 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                             "raw_nulls": deterministic.raw_nulls,
                             "refined_nulls": deterministic.refined_nulls,
                             "format": format_meta,
+                            "dynamic_selected_bbox": dynamic_analysis.bbox,
+                            "dynamic_matrix_selection": dynamic_analysis.extraction_selection,
                         },
                     )
 
                     overlay_path, crop_path = save_diagnostics(
                         page_image,
                         deterministic.raw_bbox,
-                        deterministic.refined_bbox,
+                        dynamic_analysis.bbox,
                         table_dir,
                         dpi=args.render_dpi,
                         padding_points=args.crop_padding,
                     )
+                    # Version 9 diagnostic contract. These names make it clear
+                    # which stage should be inspected when an SKU-to-attribute
+                    # relationship is wrong.
+                    page_image.save(table_dir / "00_source_page.png")
+                    shutil.copyfile(overlay_path, table_dir / "01_table_overlay.png")
+                    shutil.copyfile(crop_path, table_dir / "02_table_crop.png")
 
-                    final_method = f"{deterministic.source}_normalized"
-                    final_columns = deterministic_columns
-                    final_rows = deterministic_rows
+                    final_method = f"{deterministic.source}_dynamic_cell_graph"
+                    final_columns = dynamic_columns
+                    final_rows = dynamic_rows
                     review_result: dict[str, Any] | None = None
                     structure_result: dict[str, Any] | None = None
                     ai_error: str | None = None
                     ai_boundary_applied = False
                     reviewed_table = deterministic
                     reviewed_rows = normalized_rows
-                    reviewed_columns = deterministic_columns
-                    reviewed_records = deterministic_rows
+                    reviewed_columns = dynamic_columns
+                    reviewed_records = dynamic_rows
                     effective_geometry_meta = (
                         grid_meta if grid_meta.get("selected") else word_meta
                     )
@@ -3943,6 +3989,12 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                         deterministic,
                         effective_geometry_meta,
                     )
+                    dynamic_confidence = float(dynamic_analysis.classification.get("confidence", 0.0))
+                    if dynamic_confidence < 0.90:
+                        review_reasons.append(
+                            "dynamic_table_classification_below_auto_accept:"
+                            f"{dynamic_analysis.classification.get('selected')}:{dynamic_confidence:.2f}"
+                        )
                     if review_reasons:
                         review_queue.append([
                             pdf_path.name,
@@ -4180,16 +4232,28 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                     write_json(table_dir / "quality_report.json", quality_report)
 
                     write_csv(table_dir / "final.csv", [final_columns, *final_rows])
-                    final_product_records = dynamic_product_records(
-                        final_columns,
-                        final_rows,
-                        registry=product_code_registry,
-                        product_code_pattern=product_code_pattern,
-                        page_number=page_number,
-                        table_number=table_number,
-                        method=final_method,
-                    )
-                    product_columns, product_rows = product_records_wide(final_product_records)
+                    if final_method.startswith("ollama_structured_"):
+                        final_product_records = dynamic_product_records(
+                            final_columns,
+                            final_rows,
+                            registry=product_code_registry,
+                            product_code_pattern=product_code_pattern,
+                            page_number=page_number,
+                            table_number=table_number,
+                            method=final_method,
+                        )
+                    else:
+                        final_product_records = dynamic_analysis.product_records
+                    product_columns, product_rows = dtm.product_records_to_wide(final_product_records)
+                    # Keep the table model synchronized with the accepted
+                    # product records so continuation joins can operate after
+                    # all adjacent pages have been analysed.
+                    table_model_path = table_dir / "table_model.json"
+                    if table_model_path.exists():
+                        table_model_payload = json.loads(table_model_path.read_text(encoding="utf-8"))
+                        table_model_payload["product_records"] = final_product_records
+                        table_model_payload["accepted_table_method"] = final_method
+                        write_json(table_model_path, table_model_payload)
                     write_json(
                         table_dir / "product_records.json",
                         final_product_records,
@@ -4255,6 +4319,9 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                         ],
                         "merged_cell_expansions": len(expansion_events),
                         "format": format_meta,
+                        "dynamic_orientation": dynamic_analysis.classification.get("selected"),
+                        "dynamic_orientation_confidence": dynamic_analysis.classification.get("confidence"),
+                        "dynamic_normalization_status": dynamic_analysis.validation.get("normalization_status"),
                         "dropped_left_columns": deterministic.dropped_left,
                         "dropped_right_columns": deterministic.dropped_right,
                         "final_method": final_method,
@@ -4294,10 +4361,85 @@ def extract_catalogue(args: argparse.Namespace) -> int:
                 {"pages": combined_layout_pages},
             )
 
+        # Compare adjacent page pairs only after every selected table has a
+        # neutral cell graph.  Auto-join high-confidence continuation tables,
+        # preserve medium-confidence proposals for review, and then rebuild all
+        # catalogue aggregates from the updated per-table checkpoints.
+        continuation_joins: list[dict[str, Any]] = []
+        continuation_reviews: list[dict[str, Any]] = []
+        table_models: list[dict[str, Any]] = []
+        table_model_paths: dict[tuple[int, int], Path] = {}
+        for model_path in sorted(output_root.glob("page_*/table_*/table_model.json")):
+            try:
+                model = json.loads(model_path.read_text(encoding="utf-8"))
+                table_models.append(model)
+                table_model_paths[(int(model["page"]), int(model["table"]))] = model_path
+            except Exception as exc:
+                LOGGER.warning("Could not load table model %s: %s", model_path, exc)
+        if not args.no_continuation_joins and table_models:
+            continuation_joins, continuation_reviews = dtm.discover_and_apply_continuations(
+                table_models,
+                table_profile,
+                auto_threshold=args.continuation_auto_threshold,
+                review_threshold=args.continuation_review_threshold,
+            )
+            write_json(output_root / "continuation_joins.json", continuation_joins)
+            write_json(output_root / "continuation_join_review.json", continuation_reviews)
+            for model in table_models:
+                key = (int(model["page"]), int(model["table"]))
+                model_path = table_model_paths.get(key)
+                if not model_path:
+                    continue
+                write_json(model_path, model)
+                table_dir = model_path.parent
+                pcols, prows = dtm.product_records_to_wide(model.get("product_records", []))
+                write_csv(table_dir / "05_normalized_product_records.csv", [pcols, *prows])
+                write_json(table_dir / "product_records.json", model.get("product_records", []))
+                write_csv(table_dir / "product_records.csv", [pcols, *prows])
+                related_joins = [
+                    join for join in continuation_joins
+                    if join.get("primary") == {"page": key[0], "table": key[1]}
+                    or join.get("secondary") == {"page": key[0], "table": key[1]}
+                ]
+                if related_joins:
+                    write_json(table_dir / "13_continuation_evidence.json", related_joins)
+                final_path = table_dir / "final.json"
+                if final_path.exists():
+                    payload = json.loads(final_path.read_text(encoding="utf-8"))
+                    payload["product_records"] = model.get("product_records", [])
+                    payload["continuation_join_ids"] = [
+                        join["join_id"] for join in continuation_joins
+                        if join.get("primary") == {"page": key[0], "table": key[1]}
+                        or join.get("secondary") == {"page": key[0], "table": key[1]}
+                    ]
+                    write_json(final_path, payload)
+
+        # Rebuild aggregates from per-table final checkpoints.  This makes
+        # continuation inheritance and resumed tables authoritative.
+        all_product_records = []
+        structured_tables = []
+        long_rows = [["source_pdf", "page", "table", "method", "row_index", "column_index", "column_name", "value"]]
+        product_long_rows = [["source_pdf", "page", "table", "product_code", "code_position", "attribute_name", "attribute_value", "source_rows", "source_columns", "method"]]
+        for final_path in sorted(output_root.glob("page_*/table_*/final.json")):
+            payload = json.loads(final_path.read_text(encoding="utf-8"))
+            page_number = int(final_path.parent.parent.name.split("_")[-1])
+            table_number = int(final_path.parent.name.split("_")[-1])
+            columns = [clean_cell(value) for value in payload.get("columns", [])]
+            rows = rectangularize(payload.get("rows", []))
+            method = str(payload.get("method", "resumed"))
+            records = payload.get("product_records", [])
+            all_product_records.extend(records)
+            product_long_rows.extend(product_records_long_rows(pdf_path.name, records))
+            long_rows.extend(create_universal_long_rows(
+                pdf_name=pdf_path.name, page_number=page_number, table_number=table_number,
+                method=method, columns=columns, rows=rows,
+            ))
+            structured_tables.append({"page": page_number, "table": table_number, "columns": columns, "rows": rows, "method": method})
+
         write_csv(output_root / "all_tables_long.csv", long_rows)
         write_csv(output_root / "all_products_long.csv", product_long_rows)
         write_json(output_root / "all_product_records.json", all_product_records)
-        all_product_columns, all_product_rows = product_records_wide(all_product_records)
+        all_product_columns, all_product_rows = dtm.product_records_to_wide(all_product_records)
         write_csv(
             output_root / "all_products_wide.csv",
             [all_product_columns, *all_product_rows],
@@ -4317,6 +4459,21 @@ def extract_catalogue(args: argparse.Namespace) -> int:
             page_count=doc.page_count,
         )
         review_queue.extend(additional_review_rows)
+        for proposal in continuation_reviews:
+            review_queue.append([
+                pdf_path.name,
+                proposal.get("primary", {}).get("page", ""),
+                proposal.get("primary", {}).get("table", ""),
+                "",
+                "continuation_join_review",
+                json.dumps(proposal, ensure_ascii=False),
+                "",
+                proposal.get("score", ""),
+                "",
+                "open",
+                "",
+                "",
+            ])
         write_csv(output_root / "review_queue.csv", review_queue)
 
         extracted_locations: dict[str, list[str]] = collections.defaultdict(list)
@@ -4338,6 +4495,8 @@ def extract_catalogue(args: argparse.Namespace) -> int:
         manifest["unexpected_pdf_codes"] = len(
             set(extracted_locations) - canonical_keys
         )
+        manifest["continuation_join_count"] = len(continuation_joins)
+        manifest["continuation_join_review_count"] = len(continuation_reviews)
         write_json(output_root / "all_tables.json", structured_tables)
         write_json(output_root / "manifest.json", manifest)
 
@@ -4360,8 +4519,10 @@ def build_parser() -> argparse.ArgumentParser:
         description=(
             "Extract PyMuPDF4LLM table boxes, combine compatible PyMuPDF grid "
             "geometry to expand merged cells, repair borderless columns, build "
-            "a product-code registry, emit schema-flexible product records, and "
-            "optionally route difficult tables to local Ollama."
+            "a product-code registry, reconstruct hierarchical headers, classify "
+            "dynamic table orientations, join continuation tables, emit faithful "
+            "tables plus high-precision SKU records, and optionally route difficult "
+            "tables to local Ollama."
         )
     )
     parser.add_argument(
@@ -4599,6 +4760,32 @@ def build_parser() -> argparse.ArgumentParser:
         help="Padding around refined table crop in PDF points (default: 2).",
     )
     parser.add_argument(
+        "--table-profile",
+        type=Path,
+        help=(
+            "Optional reusable JSON profile containing SKU patterns, header "
+            "aliases, non-SKU option codes, units, and footnote rules. The "
+            "generic engine works without a profile."
+        ),
+    )
+    parser.add_argument(
+        "--no-continuation-joins",
+        action="store_true",
+        help="Disable automatic comparison and joining of adjacent-page table continuations.",
+    )
+    parser.add_argument(
+        "--continuation-auto-threshold",
+        type=float,
+        default=0.90,
+        help="Minimum confidence for an automatic adjacent-page continuation join (default: 0.90).",
+    )
+    parser.add_argument(
+        "--continuation-review-threshold",
+        type=float,
+        default=0.70,
+        help="Minimum confidence for writing a continuation join proposal to review (default: 0.70).",
+    )
+    parser.add_argument(
         "--overrides",
         type=Path,
         help=(
@@ -4733,6 +4920,7 @@ CONFIG_PATH_FIELDS = {
     "overrides",
     "schema",
     "review_queue_input",
+    "table_profile",
 }
 
 
